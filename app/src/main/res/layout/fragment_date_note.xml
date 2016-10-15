@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.seki.noteasklite.CustomControl.CollapseOnScrollView
+    android:id="@+id/berta"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:stayVisibleId="@+id/important"
+    app:expandOnDragId="@+id/expandLast"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="fill_vertical"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/expandLast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <cn.aigestudio.datepicker.views.DatePicker
+        app:layout_behavior="com.seki.noteasklite.Behavior.DatePickerBehavior"
+        android:id="@+id/date_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/important"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+    </LinearLayout>
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:visibility="visible"
+        android:id="@+id/loading_bg"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center"
+        app:matProg_barWidth="4dp"
+        app:matProg_barColor="@color/colorAccent"
+        app:matProg_progressIndeterminate="true"
+        app:matProg_fillRadius="true" />
+        <com.seki.noteasklite.Base.BaseRecycleView
+            android:id="@+id/recycle_view"
+            android:padding="4dp"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android" />
+    </LinearLayout>
+    </com.seki.noteasklite.CustomControl.CollapseOnScrollView>

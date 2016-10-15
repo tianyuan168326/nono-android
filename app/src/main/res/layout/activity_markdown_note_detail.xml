@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#00ffffff"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:theme="@style/AppTheme.AppBarOverlay"/>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/real_toolbar"
+            android:background="@color/background_material_light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/note_detail_groupname"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorAccent"
+                    android:textSize="@dimen/abc_text_size_subtitle_material_toolbar"
+                    android:text="GroupName/up名/n/n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <RelativeLayout
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="10sp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginLeft="4dp"
+                        tools:text="423434324234234"
+                        android:id="@+id/note_detail_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/note_detail_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginTop="@dimen/dimen_4_dp"
+                            android:textSize="10sp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginLeft="4dp"
+                            android:text="字数:"
+                            android:id="@+id/note_detail_text_num_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="@dimen/dimen_4_dp"
+                            android:textSize="10sp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginLeft="4dp"
+                            android:text="0"
+                            android:id="@+id/note_detail_text_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:background="#fff"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <com.seki.noteasklite.CustomControl.MarkDownWebView
+            android:background="@color/white"
+            android:id="@+id/note_detail_content"
+            android:layout_width="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_height="wrap_content"/>
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <io.codetail.widget.RevealFrameLayout
+
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </io.codetail.widget.RevealFrameLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/edit_fab"
+        android:src="@mipmap/ic_mode_edit_white_48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="@dimen/fab_margin"/>
+</android.support.design.widget.CoordinatorLayout>

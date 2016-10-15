@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <!--<item android:id="@+id/action_search" android:title="@string/action_search"-->
+        <!--android:orderInCategory="100" app:showAsAction="always"-->
+        <!--android:icon="@mipmap/ic_search_white_24dp"/>-->
+    <!--<item android:id="@+id/action_mail" android:title="@string/action_mail"-->
+        <!--android:orderInCategory="100" app:showAsAction="always"-->
+        <!--android:icon="@mipmap/ic_mail_white_24dp"/>-->
+    <!--<item android:id="@+id/action_message" android:title="@string/action_message"-->
+        <!--android:orderInCategory="100" app:showAsAction="always"-->
+        <!--android:icon="@mipmap/ic_notifications_white_24dp"/>-->
+    <item android:id="@+id/action_save_note" android:title="@string/action_save_note"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_import_note" android:title="@string/action_import_note"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_save_note_txt" android:title="@string/action_save_note_txt"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_app_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_log_out" android:title="@string/action_log_out"
+        android:orderInCategory="100" app:showAsAction="never" android:visible="false"/>
+    <item android:id="@+id/action_log_in" android:title="@string/action_log_in"
+        android:orderInCategory="100" app:showAsAction="never" android:visible="true"/>
+
+    <item android:id="@+id/action_delete_all" android:title="@string/action_delete_all"
+        android:orderInCategory="100" app:showAsAction="never"  />
+    <item android:id="@+id/action_restore_all" android:title="@string/action_restore_all"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_pay_developer" android:title="@string/action_pay_developer"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_share_nono" android:title="@string/action_share_nono"
+        android:orderInCategory="100" app:showAsAction="never" />
+
+</menu>

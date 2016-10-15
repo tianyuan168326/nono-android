@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@+id/empty_recycle_bin"
+        android:visibility="gone"
+        layout="@layout/empty_recycle_bin"/>
+    <include
+        android:id="@+id/empty_note"
+        android:visibility="gone"
+        layout="@layout/empty_note"/>
+    <include
+        android:id="@+id/empty_view"
+        android:visibility="gone"
+        layout="@layout/empty_view"/>
+    <include
+        android:id="@+id/material_progress"
+        android:visibility="gone"
+        layout="@layout/layout_material_progress"/>
+    <include
+        android:id="@+id/empty_label_note"
+        android:visibility="gone"
+        layout="@layout/layout_empty_label_note"
+        />
+    <LinearLayout
+        android:visibility="invisible"
+        android:id="@+id/loading_bg"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent">
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            app:matProg_barWidth="4dp"
+            app:matProg_barColor="@color/colorAccent"
+            app:matProg_progressIndeterminate="true"
+            app:matProg_fillRadius="true" />
+    </LinearLayout>
+
+<android.support.v4.widget.SwipeRefreshLayout
+    android:id="@+id/recycle_view_refresher"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.seki.noteasklite.Base.BaseRecycleView
+        android:clipToPadding="false"
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android" />
+</android.support.v4.widget.SwipeRefreshLayout>
+</FrameLayout>

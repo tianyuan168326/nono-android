@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name" translatable="false">TheRichEditText</string>
+    <string name="photo_note">Note</string>
+    <string name="photo_change">Change</string>
+    <string name="select_photo">Click to select photo</string>
+    <string name="view_photo">View</string>
+    <string name="photo_delete">Delete</string>
+</resources>

@@ -1,0 +1,101 @@
+<LinearLayout
+    app:layout_collapseMode="pin"
+    android:id="@+id/header"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <com.facebook.drawee.view.SimpleDraweeView
+        fresco:roundingBorderWidth="2dp"
+        fresco:roundingBorderColor="#fff"
+        fresco:roundAsCircle="true"
+        fresco:placeholderImage="@mipmap/ic_person_white_48dp"
+        android:layout_marginTop="24dp"
+        android:id="@+id/activity_user_info_headimg"
+        android:layout_width="84dp"
+        android:layout_height="84dp" />
+    <TextView
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="8dp"
+        android:textSize="@dimen/abc_text_size_headline_material"
+        android:textColor="#fff"
+        tools:text="Name"
+        android:id="@+id/activity_user_info_real_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:gravity="center"
+        android:textColor="@color/primary_text_default_material_dark"
+        android:layout_marginTop="10dp"
+        android:id="@+id/activity_user_info_abstract"
+        android:text="还没来得及介绍自己"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="@dimen/abc_text_size_caption_material"
+            android:textColor="@color/secondary_text_default_material_dark"
+            android:id="@+id/activity_user_info_noticed_num"
+            tools:text="100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="@dimen/abc_text_size_caption_material"
+            android:textColor="@color/secondary_text_default_material_dark"
+            android:text=" 位关注者"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="@dimen/abc_text_size_caption_material"
+            android:textColor="@color/secondary_text_default_material_dark"
+            android:text=" - "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="@dimen/abc_text_size_caption_material"
+            android:textColor="@color/secondary_text_default_material_dark"
+            android:id="@+id/activity_user_info_voted_on_num"
+            tools:text="3000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="@dimen/abc_text_size_caption_material"
+            android:textColor="@color/secondary_text_default_material_dark"
+            android:text=" 条赞同"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/activity_user_info_notice"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="关注"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/activity_user_info_im"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="私信"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,127 @@
+
+
+
+
+
+<android.support.design.widget.CoordinatorLayout android:fitsSystemWindows="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:orientation="vertical"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+    <LinearLayout
+
+        android:orientation="vertical"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+
+
+
+        <include layout="@layout/toolbar"
+
+            app:layout_scrollFlags="scroll|enterAlways"
+
+            >
+
+        </include>
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+
+            android:id="@+id/title_zone"
+
+            android:background="#fff"
+
+            android:orientation="horizontal"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
+
+    <android.support.v7.widget.AppCompatEditText
+android:singleLine="true"
+        android:maxLength="20"
+
+        tools:text=""
+
+        android:padding="8dp"
+
+        android:background="#fff"
+
+        android:hint="标题"
+
+        android:id="@+id/note_edit_title"
+
+        android:layout_weight="1"
+
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"/>
+
+            <TextView
+
+                android:background="#fff"
+
+                android:layout_gravity="bottom"
+
+                android:textSize="@dimen/md_caption_text_size"
+
+                android:text="字数:"
+
+                android:paddingRight="@dimen/dimen_8dp"
+
+                android:textColor="@color/md_second_color"
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content" />
+
+            <TextView
+
+                android:background="#fff"
+
+                android:id="@+id/note_text_num"
+
+                android:layout_gravity="bottom"
+
+                android:textSize="@dimen/md_caption_text_size"
+
+                tools:text="1"
+
+                android:paddingRight="@dimen/dimen_8dp"
+
+                android:textColor="@color/md_second_color"
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    <com.seki.therichedittext.EditView
+        android:id="@+id/note_edit_editText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

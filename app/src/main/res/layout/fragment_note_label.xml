@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:padding="@dimen/dimen_4_dp"
+        android:background="@color/material_grey_300"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/dimen_16_dp"
+        android:layout_marginRight="@dimen/dimen_16_dp"
+        android:layout_marginTop="@dimen/dimen_16_dp"
+        android:layout_marginBottom="@dimen/dimen_16_dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.seki.noteasklite.CustomControl.TintImageView
+            android:layout_marginLeft="@dimen/dimen_8_dp"
+            android:layout_marginRight="@dimen/dimen_8_dp"
+            android:src="@mipmap/ic_search_white_24dp"
+            android:tint="@color/ab__gray_light"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+            <EditText
+                android:padding="@dimen/dimen_4_dp"
+                android:background="@null"
+                android:cursorVisible="false"
+                android:layout_gravity="center"
+                android:textSize="@dimen/md_regular_text_size"
+                android:textColor="@color/md_second_color"
+                android:id="@+id/et_search_label"
+                android:hint="查找标签..."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <include
+        layout="@layout/recycle_view"/>
+
+</LinearLayout>

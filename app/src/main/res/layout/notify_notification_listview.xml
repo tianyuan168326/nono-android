@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/notify_notification_list_refresher"
+        >
+        <com.seki.noteasklite.Base.BaseRecycleView
+            android:id="@+id/notify_notification_listview"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+        </com.seki.noteasklite.Base.BaseRecycleView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

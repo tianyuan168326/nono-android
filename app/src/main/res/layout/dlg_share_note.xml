@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:padding="@dimen/dimen_16_dp"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/root_text"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.seki.noteasklite.CustomControl.TintImageView
+            app:tintColor="@color/md_second_color"
+            android:src="@drawable/ic_text_128px"
+            android:layout_width="@dimen/dimen_48_dp"
+            android:layout_height="@dimen/dimen_48_dp" />
+        <TextView
+            android:layout_marginTop="@dimen/dimen_8_dp"
+            android:textSize="@dimen/md_caption_text_size"
+            android:text="文本"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginLeft="@dimen/dimen_64_dp"
+        android:id="@+id/root_image"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.seki.noteasklite.CustomControl.TintImageView
+            app:tintColor="@color/md_second_color"
+            android:src="@drawable/ic_image_white_24dp"
+            android:layout_width="@dimen/dimen_48_dp"
+            android:layout_height="@dimen/dimen_48_dp" />
+        <TextView
+            android:layout_marginTop="@dimen/dimen_8_dp"
+            android:textSize="@dimen/md_caption_text_size"
+            android:text="图片"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

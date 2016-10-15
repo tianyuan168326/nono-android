@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <animation-list
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <item  android:drawable="@mipmap/explode_0_new"
+            android:duration="10"/>
+    <item  android:drawable="@mipmap/explode_1_new"
+        android:duration="10"/>
+    <item  android:drawable="@mipmap/explode_2_new"
+        android:duration="10"/>
+    <item  android:drawable="@mipmap/explode_3_new"
+        android:duration="10"/>
+    <item  android:drawable="@mipmap/explode_4_new"
+        android:duration="10"/>
+    <item  android:drawable="@mipmap/explode_5_new"
+        android:duration="10"/>
+    <item  android:drawable="@mipmap/explode_6_new"
+        android:duration="10"/>
+    <item  android:drawable="@mipmap/explode_7_new"
+        android:duration="10"/>
+    <item  android:drawable="@mipmap/explode_8_new"
+        android:duration="10"/>
+    <item  android:drawable="@mipmap/explode_9_new"
+        android:duration="10"/>
+    <item  android:drawable="@mipmap/explode_10_new"
+        android:duration="10"/>
+    <item  android:drawable="@mipmap/explode_11_new"
+        android:duration="10"/>
+    <item  android:drawable="@mipmap/explode_12_new"
+        android:duration="10"/>
+    <item  android:drawable="@mipmap/explode_13_new"
+        android:duration="10"/>
+    <item  android:drawable="@mipmap/explode_14_new"
+        android:duration="10"/>
+    <item  android:drawable="@mipmap/explode_15_new"
+        android:duration="10"/>
+    </animation-list>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/activity_horizontal_margin_half"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin_half"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="@dimen/dimen_2_dp"
+    app:cardElevation="@dimen/dimen_2_dp"
+    >
+<LinearLayout
+    android:padding="@dimen/dimen_8_dp"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/md_text"
+    >
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_marginRight="@dimen/dimen_16_dp"
+        android:layout_marginBottom="@dimen/dimen_16_dp"
+        android:id="@+id/inner_question_answer_comment_list_item_headimg"
+        fresco:roundAsCircle="true"
+        fresco:placeholderImage="@drawable/nono_default_head"
+        android:layout_gravity="top"
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/inner_question_answer_comment_list_item_name"
+            tools:text="加载中"
+            android:textSize="@dimen/md_subhead_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="@dimen/dimen_4_dp"
+            android:id="@+id/inner_question_answer_comment_list_item_content"
+            tools:text="加载中"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="@dimen/dimen_4_dp"
+            android:id="@+id/inner_question_answer_comment_list_item_time"
+            tools:text="加载中"
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
+</android.support.v7.widget.CardView>

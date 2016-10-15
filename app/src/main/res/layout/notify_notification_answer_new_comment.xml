@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:descendantFocusability="blocksDescendants"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:paddingLeft="@dimen/abc_list_item_padding_horizontal_material"
+    android:paddingRight="@dimen/abc_list_item_padding_horizontal_material"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimen_8_dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:clickable="false"
+            android:focusable="false"
+            android:id="@+id/user_name"
+            android:theme="@style/notify_name_text"
+            tools:text="用户"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:theme="@style/notify_title_text"
+            android:text="评论了你的回答"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:clickable="false"
+        android:focusable="false"
+        android:background="?android:attr/selectableItemBackground"
+        android:id="@+id/answer_abstract"
+        android:layout_marginTop="@dimen/dimen_8_dp"
+        android:theme="@style/notify_detail_text"
+        tools:text="回答摘要"
+        android:maxLines="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:focusable="false"
+        android:clickable="false"
+        android:background="?android:attr/selectableItemBackground"
+        android:id="@+id/comment_abstract"
+        android:layout_marginTop="@dimen/dimen_8_dp"
+        android:layout_marginBottom="@dimen/dimen_8_dp"
+        android:theme="@style/notify_detail_text"
+        android:maxLines="3"
+        tools:text="评论摘要"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.example.notedemo.Activity.NoteEditActivity">
+      <!--
+      <item android:id="@+id/action_save"
+            android:title="@string/action_save"
+            android:icon="@mipmap/ic_save_white_24dp"
+            android:orderInCategory="100"
+            app:showAsAction="ifRoom"/>
+      -->
+      <item android:id="@+id/action_issue"
+          android:title="@string/action_issue"
+          android:icon="@mipmap/ic_send_white_24dp"
+          android:orderInCategory="100"
+          app:showAsAction="always"/>
+      <!--
+      <item android:id="@+id/action_change_group"
+            android:title="@string/action_change_group"
+            android:orderInCategory="100"
+            app:showAsAction="never"/>
+      -->
+      <!--<item android:id="@+id/action_share"-->
+            <!--android:title="@string/action_share"-->
+            <!--android:icon="@mipmap/ic_share_white_24dp"-->
+            <!--android:orderInCategory="100"-->
+            <!--app:showAsAction="always"/>-->
+</menu>

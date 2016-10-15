@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"/>
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/activity_inner_question_answer_comment_recycle_view_refresher"
+        android:layout_width="match_parent"
+        android:layout_weight ="1"
+        android:layout_height="0dp">
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:id="@+id/activity_inner_question_answer_comment_recycle_view"
+            />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:hint="发表有意义的评论"
+            android:id="@+id/activity_inner_question_answer_comment_content"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <com.seki.noteasklite.CustomControl.TintImageView
+            android:layout_gravity="center"
+            android:id="@+id/activity_inner_question_answer_comment_content_sender"
+            android:text="发送啦"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@mipmap/ic_send_black_36dp"
+            app:tintColor="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

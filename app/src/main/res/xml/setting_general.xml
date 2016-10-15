@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="内容">
+
+        <CheckBoxPreference android:title="是否自动填充标题"
+            android:key="is_auto_title"
+            android:defaultValue="true"
+            android:summaryOn="未输入标题时自动截取笔记7个字符作为标题"
+            android:summaryOff="未输入标题时标题为空!"/>
+        <ListPreference android:title="更改笔记卡片大小（重启应用后起效）"
+            android:defaultValue="6"
+            android:key="card_line_num"
+            android:entryValues="@array/settings_entry_values_card_line_num"
+            android:entries="@array/settings_entries_card_line_num"/>
+
+        <com.seki.noteasklite.CustomControl.Prefer.MaterialListPreference
+            android:title="更改主題"
+        android:defaultValue="light_purple"
+        android:summary="%s"
+        android:key="app_theme"
+        android:entryValues="@array/settings_entry_values_app_theme"
+        android:entries="@array/settings_entries_app_theme"/>
+        <CheckBoxPreference android:title="是否设置手势安全密码"
+            android:key="is_password"
+            android:defaultValue="false"
+            android:summaryOn="已设置手势密码"
+            android:summaryOff="还未设置手势密码!"/>
+        <CheckBoxPreference android:title="是否设置Pin安全密码"
+            android:key="is_pin_password"
+            android:defaultValue="false"
+            android:summaryOn="已设置Pin码"
+            android:summaryOff="还未设置Pin码!"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="操作">
+        <CheckBoxPreference android:title="长按笔记删除是否同步删除云笔记"
+            android:key="is_delete_sync_cloud"
+            android:defaultValue="false"
+            android:summaryOn="同步删除云笔记"
+            android:summaryOff="仅删除本地"/>
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="同步">
+        <CheckBoxPreference android:title="是否有WIFI时自动同步笔记到云"
+            android:key="is_auto_backup"
+            android:defaultValue="false"
+            android:summaryOn="是"
+            android:summaryOff="否"/>
+        <CheckBoxPreference android:title="联网时笔记编辑后是否自动同步到云"
+            android:key="is_edit_auto_sync"
+            android:defaultValue="false"
+            android:summaryOn="是"
+            android:summaryOff="否"/>
+    </PreferenceCategory>
+
+
+    <PreferenceCategory android:title="关于">
+        <PreferenceScreen android:title="检查内测版本更新"
+            android:summary="快人一步体验新功能"
+        android:key="checkUpdate">
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:title="遇到问题？加入内测QQ群!"
+            android:summary="反馈给我问题">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="mqqopensdkapi://bizAgent/qm/qr?url=http%3A%2F%2Fqm.qq.com%2Fcgi-bin%2Fqm%2Fqr%3Ffrom%3Dapp%26p%3Dandroid%26k%3DpPrh7Luw7_Zyx3kayGDvJITXNWA6Vlkg"/>
+
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:title="用的爽？给个好评吧！"
+            android:summary="到应用商店赏个5★">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="market://details?id=com.seki.noteasklite"/>
+
+        </PreferenceScreen>
+        <PreferenceScreen android:title="反馈"
+            android:summary="点击发送反馈到我的邮箱">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="mailto:932610359@qq.com?subject=NONo笔记反馈"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,425 @@
+<resources>
+    <string name="app_name">NONo笔记</string>
+
+    <string name="pic_store">http://diandianapp-keypic.stor.sinaapp.com/</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">设置</string>
+
+
+    <string name="action_message">消息</string>
+    <string name="action_share">分享</string>
+    <string name="action_delete">删除</string>
+    <string name="action_save">保存</string>
+    <string name="action_change_group">更换文集</string>
+
+    <string name="title_activity_group_note">GroupNoteActivity</string>
+    <string name="title_activity_date_note">GroupDateActivity</string>
+    <string name="title_activity_note_detail">NoteDetailActivity</string>
+    <string name="title_activity_note_edit">NoteEditActivity</string>
+
+    <string name="firstin_title1">长按我!</string>
+    <string name="firstin_content1">
+        <Data><![CDATA[<p><span style ="font-size:1.0em">长</span><span style ="font-size:1.0em">按</span><span style ="font-size:1.0em">我</span><span style ="font-size:1.0em">!</span>
+<span style ="font-size:1.0em">1</span><span style ="font-size:1.0em">、</span><span style ="font-size:1.0em">可以</span><span style ="font-size:1.0em">快捷</span><span style ="font-size:1.0em">删除</span><span style ="font-size:1.0em">我</span><span style ="font-size:1.0em">!</span><br>
+<span style ="font-size:1.0em">2</span><span style ="font-size:1.0em">、</span><span style ="font-size:1.0em">可以</span><span style ="font-size:1.0em">快捷</span><span style ="font-size:1.0em">编辑</span><span style ="font-size:1.0em">我</span><span style ="font-size:1.0em">!</span><br>
+<span style ="font-size:1.0em">3</span><span style ="font-size:1.0em">、</span><span style ="font-size:1.0em">可以</span><span style ="font-size:1.0em">把我</span><span style ="font-size:1.0em">导出为</span><span style ="font-size:1.0em">p</span><span style ="font-size:1.0em">d</span><span style ="font-size:1.0em">f</span><span style ="font-size:1.0em">!</span><span style ="font-size:1.0em">(</span><span style ="font-size:1.0em">需要</span><span style ="font-size:1.0em">联网</span><span style ="font-size:1.0em">)</span><br>
+<span style ="font-size:1.0em">4</span><span style ="font-size:1.0em">、</span><span style ="font-size:1.0em">可以</span><span style ="font-size:1.0em">复制我</span><span style ="font-size:1.0em">!</span><br>
+<span style ="font-size:1.0em">5</span><span style ="font-size:1.0em">、</span><span style ="font-size:1.0em">可以</span><span style ="font-size:1.0em">把我</span><span style ="font-size:1.0em">分享到</span><span style ="font-size:1.0em">答记</span><span style ="font-size:1.0em">模块</span><span style ="font-size:1.0em">!</span></p>
+ ]]> </Data></string>
+    <string name="firstin_title2">看顶端</string>
+    <string name="firstin_content2"><Data><![CDATA[<p><span style ="font-size:1.0em">顶部</span><span style ="font-size:1.0em">菜单</span><span style ="font-size:1.0em">主要</span><span style ="font-size:1.0em">用来</span><span style ="font-size:1.0em">:</span><br>
+<span style ="font-size:1.0em">1</span><span style ="font-size:1.0em">、</span><span style ="font-size:1.0em">搜索</span><span style ="font-size:1.0em">自己</span><span style ="font-size:1.0em">的</span><span style ="font-size:1.0em">笔记</span><span style ="font-size:1.0em">，</span><span style ="font-size:1.0em">而且</span><span style ="font-size:1.0em">还可以</span><span style ="font-size:1.0em">展开</span><span style ="font-size:1.0em">所有</span><span style ="font-size:1.0em">标签</span><span style ="font-size:1.0em">哦</span><span style ="font-size:1.0em">!</span><br>
+<span style ="font-size:1.0em">2</span><span style ="font-size:1.0em">、</span><span style ="font-size:1.0em">查看</span><span style ="font-size:1.0em">其他</span><span style ="font-size:1.0em">N</span><span style ="font-size:1.0em">O</span><span style ="font-size:1.0em">友</span><span style ="font-size:1.0em">给你发的</span><span style ="font-size:1.0em">私信</span><br>
+<span style ="font-size:1.0em">3</span><span style ="font-size:1.0em">、</span><span style ="font-size:1.0em">查看</span><span style ="font-size:1.0em">答记</span><span style ="font-size:1.0em">社区</span><span style ="font-size:1.0em">的</span><span style ="font-size:1.0em">新通知</span><span style ="font-size:1.0em">!</span><br>
+<span style ="font-size:1.0em">4</span><span style ="font-size:1.0em">、</span><span style ="font-size:1.0em">备份</span><span style ="font-size:1.0em">所有笔记为</span><span style ="font-size:1.0em">t</span><span style ="font-size:1.0em">x</span><span style ="font-size:1.0em">t</span><br>
+<span style ="font-size:1.0em">5</span><span style ="font-size:1.0em">、</span><span style ="font-size:1.0em">打开</span><span style ="font-size:1.0em">设置</span><span style ="font-size:1.0em">页</span><br>
+<span style ="font-size:1.0em">6</span><span style ="font-size:1.0em">、</span><span style ="font-size:1.0em">笔记</span><span style ="font-size:1.0em">导入</span><span style ="font-size:1.0em">导出</span></p>
+ ]]> </Data></string>
+    <string name="firstin_title3">点进这条笔记</string>
+    <string name="firstin_content3"><Data><![CDATA[<p><span style ="font-size:1.0em">点进这条笔记</span><span style ="font-size:1.0em">，</span><span style ="font-size:1.0em">双击</span><span style ="font-size:1.0em">可以</span><span style ="font-size:1.0em">直接</span><span style ="font-size:1.0em">编辑</span><span style ="font-size:1.0em">哦</span><span style ="font-size:1.0em">，</span><span style ="font-size:1.0em">右上角</span><span style ="font-size:1.0em">可以</span><span style ="font-size:1.0em">切换</span><span style ="font-size:1.0em">文集</span><span style ="font-size:1.0em">~</span><br>
+<span style ="font-size:1.0em">右下角</span><span style ="font-size:1.0em">可以</span><span style ="font-size:1.0em">分享</span><span style ="font-size:1.0em">笔记</span><span style ="font-size:1.0em">，</span><span style ="font-size:1.0em">普通</span><span style ="font-size:1.0em">文字</span><span style ="font-size:1.0em">，</span><span style ="font-size:1.0em">微博</span><span style ="font-size:1.0em">长图片</span><span style ="font-size:1.0em">都可以哦</span><span style ="font-size:1.0em">~</span></p>
+ ]]> </Data></string>
+    <string name="firstin_title4">左侧侧滑开启更多</string>
+    <string name="firstin_content4"><Data><![CDATA[<p><span style ="font-size:1.0em">1</span><span style ="font-size:1.0em">、</span><span style ="font-size:1.0em">回收站</span><span style ="font-size:1.0em">，</span><span style ="font-size:1.0em">你丢弃的</span><span style ="font-size:1.0em">笔记</span><span style ="font-size:1.0em">都可以在</span><span style ="font-size:1.0em">这儿</span><span style ="font-size:1.0em">找到哦</span><span style ="font-size:1.0em">~</span><br>
+<span style ="font-size:1.0em">2</span><span style ="font-size:1.0em">、</span><span style ="font-size:1.0em">更多归类</span><span style ="font-size:1.0em">，</span><span style ="font-size:1.0em">文集</span><span style ="font-size:1.0em">?</span><span style ="font-size:1.0em">时间</span><span style ="font-size:1.0em">?</span><span style ="font-size:1.0em">全都可以</span><span style ="font-size:1.0em">~</span><br>
+<span style ="font-size:1.0em">3</span><span style ="font-size:1.0em">、</span><span style ="font-size:1.0em">更有</span><span style ="font-size:1.0em">答记</span><span style ="font-size:1.0em">模块</span><span style ="font-size:1.0em">来按</span><span style ="font-size:1.0em">喜好</span><span style ="font-size:1.0em">发布</span><span style ="font-size:1.0em">自己</span><span style ="font-size:1.0em">的</span><span style ="font-size:1.0em">笔记</span><span style ="font-size:1.0em">，</span><span style ="font-size:1.0em">同人</span><span style ="font-size:1.0em">小说</span><span style ="font-size:1.0em">?</span><span style ="font-size:1.0em">烦恼</span><span style ="font-size:1.0em">心情</span><span style ="font-size:1.0em">?</span><span style ="font-size:1.0em">喜悦</span><span style ="font-size:1.0em">分享</span><span style ="font-size:1.0em">?</span><span style ="font-size:1.0em">都塞</span><span style ="font-size:1.0em">进去吧</span><span style ="font-size:1.0em">!</span></p>
+ ]]> </Data></string>
+    <string name="firstin_title5">开启个性化笔记</string>
+    <string name="firstin_content5"><Data><![CDATA[<p><span style ="font-size:1.0em">主页面</span><span style ="font-size:1.0em">进去</span><span style ="font-size:1.0em">右上角</span><span style ="font-size:1.0em">设置</span><span style ="font-size:1.0em">菜单</span><span style ="font-size:1.0em">看看</span><span style ="font-size:1.0em">?</span><br>
+<span style ="font-size:1.0em">1</span><span style ="font-size:1.0em">、</span><span style ="font-size:1.0em">开始</span><span style ="font-size:1.0em">定制</span><span style ="font-size:1.0em">自己的</span><span style ="font-size:1.0em">主题色</span><span style ="font-size:1.0em">!</span><br>
+<span style ="font-size:1.0em">2</span><span style ="font-size:1.0em">、</span><span style ="font-size:1.0em">设置</span><span style ="font-size:1.0em">自己的</span><span style ="font-size:1.0em">手势密码</span><span style ="font-size:1.0em">!</span><br>
+<span style ="font-size:1.0em">3</span><span style ="font-size:1.0em">、</span><span style ="font-size:1.0em">各种</span><span style ="font-size:1.0em">各样的</span><span style ="font-size:1.0em">其他</span><span style ="font-size:1.0em">个性化</span><span style ="font-size:1.0em">设置</span></p>
+ ]]> </Data></string>
+    <string name="firstin_title6">右滑删除</string>
+    <string name="firstin_content6"><Data><![CDATA[
+<p><span style ="font-size:1.0em">右滑我</span><span style ="font-size:1.0em">删除</span><span style ="font-size:1.0em">这条笔记</span><span style ="font-size:1.0em">，</span><span style ="font-size:1.0em">可以</span><span style ="font-size:1.0em">在</span><span style ="font-size:1.0em">回收站</span><span style ="font-size:1.0em">找到我</span><span style ="font-size:1.0em">哦</span><span style ="font-size:1.0em">!</span></p>
+ ]]> </Data></string>
+    <string name="firstin_title7">开始使用NONo笔记</string>
+    <string name="firstin_content7"> <Data><![CDATA[ 体验清爽的Material Design风格笔记APP!<br>
+1、笔记分类，按时间、按小组，应有尽有！<br>
+2、界面清爽，各种Material Design动画，蹦跳？旋转？淡入淡出？这些都有！还有更多！<br>
+3、独家的富文本编辑器输入，字体加粗、加斜、下划线、角标、图片插入、数学公式输入（待开发）应有尽有！<br>
+NONo-Note Only Note，不只是笔记！<br>
+1、笔记云端存储，每一条笔记都是自己的积攒，不能丢失！<br>
+2、记录问题没人会？独特问答社区拯救你，交流问题？结识朋友？解决问题？全交给我！<br>
+还想知道其他的好玩的特点？<br>
+没有任何广告和恶意弹窗的清爽笔记APP，快来体验！ ]]> </Data>
+    </string>
+    <string name="firstin_title9">开始创建MarkDown笔记.md</string>
+    <string name="firstin_content9">如果你想创建包含文字，表格，图片，\n
+    甚至是不同型号标题的笔记，那么推荐请选择使用Markdown 笔记。\n
+    NONo笔记支持 Markdown 的渲染，用简单的语法就可以写出赏心悦目的笔记。\n
+    #### 简单两步完成操作\n
+    1. **点击**笔记列表底端的圆形按钮，选择 **Markdown笔记**\n
+    2. 在正文中撰写 Markdown 语法，拇指左滑就可以看到渲染后美美的笔记啦。\n
+> 现在拇指右滑也可以直接进入编辑模式哦!\n
+\n
+\n
+简单介绍几种常用语法\n
+
+##### 标题\n
+
+在行首插入 1 到 6个#，分别表示标题 1 到标题 6 \n
+> 工具栏可以方便的输入 #,可以自动添加 空格 哦! \n\n
+  \n
+```\n
+
+ ##### 这是标题5\n
+
+ ###### 这是标题6\n
+
+```\n
+
+
+##### 这是标题5\n
+
+###### 这是标题6\n
+
+
+
+
+##### 列表\n
+
+###### 有序列表\n
+
+有序列表则使用数字加一个英文句点，并加空格，再输入文字\n
+
+
+```\n
+
+1. 你好\n
+
+1. NONo笔记\n
+
+1. 加油！\n
+
+```\n
+
+
+1. 你好\n
+
+1. NONo笔记\n
+
+1. 加油！\n
+
+
+###### 无序序列表\n
+
+
+无序列表使用星号、加号或是减号作为列表标记，并加一个空格，再输入文字\n
+
+
+```\n
+
++ Android\n
+
++ iPhone\n
+
++ iPad\n
+
+```
+
+
++ Android\n
+
++ iPhone\n
+
++ iPad\n
+\n
+\n
+##### 链接\n
+
+[描述]（链接地址）\n
+> 你可以直接点击工具栏的 link 按钮来快速添加链接!\n
+\n
+\n
+```\n
+
+[NONo笔记](www.nonobiji.com)\n
+
+
+```\n
+
+[NONo笔记](www.nonobiji.com)\n
+
+
+##### 表格\n
+
+```\n
+
+| Tables        | Are           | Cool  |\n
+| ------------- |:-------------:| -----:|\n
+| col 3 is      | right-aligned | $1600 |\n
+| col 2 is      | centered      |   $12 |\n
+| zebra stripes | are neat      |    $1 |\n
+
+```\n
+
+
+
+| Tables        | Are           | Cool  |\n
+| ------------- |:-------------:| -----:|\n
+| col 3 is      | right-aligned | $1600 |\n
+| col 2 is      | centered      |   $12 |\n
+| zebra stripes | are neat      |    $1 |\n
+
+
+
+##### 图片\n
+
+直接将图片插入到对应的位置即可，无需任何语法，比一般的 Markdown 编辑器简单很多。\n
+支持相机、本地、甚至是网络图片！\n
+
+
+
+
+##### 支持 代码段\n
+
+```\n
+int main(){\n
+ printf\n
+}\n
+```\n
+
+以上就是 Markdown 中一般用到的基本语法，非常简单，\n
+        但可以创建出非常易读的笔记哦。此篇笔记就是一篇 Markdown 笔记！\n
+        另外，直接新建普通的笔记，在标题加 .md 后缀也是可以直接渲染的。\n
+    </string>
+    <string name="firstin_title8">双击进行编辑</string>
+    <string name="firstin_content8">双击笔记进行编辑！快来体验丰富的富文本编辑选项吧！</string>
+    <string name="firstin_title10">看看右上角设置项吧</string>
+    <string name="firstin_content10">点击右上角的三个点，选择设置，可以更改主题哦，红黄蓝绿青蓝紫，自己的颜色，自己的主题！</string>
+    <string name="bindError">绑定时，方法出错</string>
+    <string name="getMethodError">动态获取方法出错</string>
+    <string name="get_question_detail_erro">获取问题详情失败</string>
+    <string name="notice">关注</string>
+    <string name="unnotice">取消关注</string>
+
+    <string name="time_minite">分钟前</string>
+    <string name="time_second">秒前</string>
+    <string name="time_hour">小时前</string>
+    <string name="yesteday">昨天</string>
+    <string name="after_tomarrow">前天</string>
+
+    <string name="i_know">知道了</string>
+    <string name="unknown">待定</string>
+    <string name="answer_detail_inhtml">问题富媒体详情</string>
+    <string name="connect_other">与他交流</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_account">账户</string>
+    <string name="prompt_password">密码</string>
+    <string name="action_sign_in">登录</string>
+    <string name="action_register">注册</string>
+    <string name="error_invalid_password">密码过短</string>
+    <string name="error_incorrect_password">密码错误</string>
+    <string name="error_field_required">请填写</string>
+    <string name="logon_length_erro">账号为3-15位密码或数字</string>
+    <string name="logon_info_ero">账号或密码错误！</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_issue">发布</string>
+    <string name="going_to_unknow">正在驶向未知</string>
+    <string name="prepare_to_unknow">准备装载未知</string>
+    <string name="begin_to_unknow">开始装载未知</string>
+    <string name="going_to_more_unknow">正在加载更多未知</string>
+    <string name="prepare_to_more_unknow">准备加载更多未知</string>
+    <string name="begin_to_more_unknow">开始加载更多未知</string>
+    <string name="send_key_success">回答成功</string>
+    <string name="password_username_erro">用户或密码错误</string>
+    <string name="check_again">请检查重试</string>
+    <string name="log_on_success">登陆成功</string>
+    <string name="menu_userinfo">我的信息</string>
+    <string name="default_userinfo">未知 | 未知</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="add_question">发布</string>
+    <string name="new_questions">新的问题</string>
+    <string name="new_questions_not_null">标题不可为空</string>
+    <string name="add_question_success">发布成功</string>
+    <string name="user_info_error">用户信息异常</string>
+    <string name="other_erro">其他异常,请重试</string>
+    <string name="add_answer">发表</string>
+    <string name="new_answer">新的答案</string>
+    <string name="hot_degree">热点度</string>
+    <string name="has">已有</string>
+    <string name="people_answer">人作答</string>
+    <string name="sign_up">注册</string>
+    <string name="log_on">登录</string>
+    <string name="register_info_input_erro">信息格式输入有误</string>
+    <string name="register_username_exist">用户名已存在</string>
+    <string name="register_success">注册成功</string>
+    <string name="register_failed">注册失败</string>
+    <string name="question_title_detail_not_null">标题不能少于10字,并检查内容是否足够丰富！</string>
+    <string name="people_comment">人评论</string>
+    <string name="dimension_question">方面的一个问题</string>
+    <string name="in_quickask">在快问</string>
+    <string name="select_pic_erro">选择图片错误</string>
+    <string name="select_pic_end_erro">图片格式错误</string>
+    <string name="take_photo_erro">拍照错误</string>
+    <string name="none_favours">已经没有关注领域了</string>
+    <string name="four_favours">已经关注四个领域了</string>
+    <string name="updata_info_success">更新信息成功</string>
+    <string name="user_info_erro">用户登陆信息异常</string>
+    <string name="TokenError">云令牌获取错误</string>
+    <string name="connectRongCloudError">连接云服务器失败</string>
+    <string name="user_info_not_full_prepared">用户信息正在加载，请稍候</string>
+    <string name="edit">编辑</string>
+    <string name="done">完成</string>
+    <string name="register">注册</string>
+    <string name="ok">完成</string>
+    <string name="notification">通知和消息</string>
+    <string name="me">与我相关</string>
+    <string name="cd_erro">要跳转到的Acticty去火星了~请查bug</string>
+    <string name="add_experience">分享经验</string>
+    <string name="add_experience_success">分享经验成功</string>
+    <string name="prompt_note">随手一记</string>
+    <string name="new_note_tips">有问题或灵感吗？</string>
+    <string name="firstInTitle">欢迎来到NoNO笔记</string>
+    <string name="firstInTitle2">开始使用NoNO笔记</string>
+    <string name="account_username_control">登陆用户名(3-15位)</string>
+    <string name="email_control">你的邮箱地址</string>
+    <string name="password_control">输入6-12位密码</string>
+    <string name="password_again_control">再次输入密码</string>
+    <string name="realname_control">你的姓名(一定要填的~)</string>
+    <string name="university_control">你所在大学(可以不填哦~)</string>
+    <string name="subkect_control">你的专业(可以不填哦~)</string>
+    <string name="action_im">联系TA</string>
+    <string name="edit_info">编辑用户信息</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="check">请检查输入！</string>
+    <string name="action_search">搜索</string>
+    <string name="action_mail">信封</string>
+    <string name="action_log_out">账号登出</string>
+    <string name="search_hint">搜索你的笔记...</string>
+    <string name="log_on_hint">单击头像以登陆</string>
+    <string name="action_read_all">全部已读</string>
+    <string name="action_save_note">笔记导出</string>
+    <string name="action_lable">标签</string>
+    <string name="action_undo">撤销操作</string>
+
+
+    <string-array name="settings_entries_post_limit">
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+    </string-array>
+
+    <string-array name="settings_entry_values_post_limit">
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+    </string-array>
+
+    <string-array name="settings_entries_image_size">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+        <item>Source</item>
+    </string-array>
+    <string-array name="settings_entry_values_app_theme">
+        <item>light_purple</item>
+        <item>red</item>
+        <item>pink</item>
+        <item>purple</item>
+        <item>deep_purple</item>
+        <item>indigo</item>
+        <item>blue</item>
+        <item>cyan</item>
+        <item>teal</item>
+        <item>green</item>
+        <item>lime</item>
+        <item>deep_orange</item>
+        <item>brown</item>
+        <item>blue_grey</item>
+    </string-array>
+    <string-array name="settings_entries_app_theme">
+        <item>亮紫色(默认)</item>
+        <item>红色</item>
+        <item>粉红色</item>
+        <item>纯紫色</item>
+        <item>深紫色</item>
+        <item>靛青</item>
+        <item>蓝色</item>
+        <item>青色</item>
+        <item>深蓝绿色</item>
+        <item>绿色</item>
+        <item>黄橙色</item>
+        <item>深橙色</item>
+        <item>棕色</item>
+        <item>蓝灰色</item>
+    </string-array>
+    <string-array name="settings_summary_app_theme">
+        <item>当前主题色：亮紫色(默认)</item>
+        <item>当前主题色：红色</item>
+        <item>当前主题色：粉红色</item>
+        <item>当前主题色：纯紫色</item>
+        <item>当前主题色：深紫色</item>
+        <item>当前主题色：靛青</item>
+        <item>当前主题色：蓝色</item>
+        <item>当前主题色：青色</item>
+        <item>当前主题色：深蓝绿色</item>
+        <item>当前主题色：绿色</item>
+        <item>当前主题色：黄橙色</item>
+        <item>当前主题色：深橙色</item>
+        <item>当前主题色：棕色</item>
+        <item>当前主题色：蓝灰色</item>
+    </string-array>
+    <string-array name="settings_entry_values_preview_image_size">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string name="title_activity_find_password">FindPasswordActivity</string>
+
+    <string name="mail_string">注册时的邮箱</string>
+    <string name="verify_code_string">验证码</string>
+    <string name="new_password_string">新的密码(至少为6位)</string>
+    <string name="new_password_dup_string">再次输入新的密码</string>
+    <string name="action_import_note">笔记导入</string>
+    <string name="action_delete_all">永久删除全部</string>
+    <string name="action_restore_all">恢复全部</string>
+    <string name="action_save_note_txt">导出为TXT</string>
+    <string name="action_share_nono">推荐NONo给朋友</string>
+    <string name="action_log_in">登陆NONo</string>
+    <string name="action_change_bg_color">换个背景色</string>
+    <string name="action_pay_developer">帮助NONo更稳定</string>
+    <string name="title_activity_markdown">MarkdownActivity</string>
+    <string name="action_help">新手入门</string>
+    <string name="action_export_pdf">导出Pdf</string>
+    <string name="action_recover">还原</string>
+    <string name="action_select_all">全选</string>
+</resources>

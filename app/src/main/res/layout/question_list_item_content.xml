@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/md_divider_color"/>
+    <TextView
+        android:id="@+id/question_abstract"
+        android:textSize="@dimen/md_regular_text_size"
+        android:text="摘要"
+        android:textColor="@color/md_primary_text"
+        android:layout_marginBottom="@dimen/dimen_8_dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>

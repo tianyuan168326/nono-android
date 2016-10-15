@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <ImageView
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_recycle_bin_200"
+        android:layout_width="128dp"
+        android:layout_height="128dp" />
+    <TextView
+        android:layout_margin="@dimen/dimen_8_dp"
+        android:textSize="@dimen/md_regular_text_size"
+        android:textColor="@color/md_second_color"
+        android:text="回收站里空空如也"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

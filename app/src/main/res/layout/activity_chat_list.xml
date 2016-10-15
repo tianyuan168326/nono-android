@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ease="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.yuantian.com.easeuitransplant.EaseConversationList
+
+        android:divider="@null"
+        ease:cvsListPrimaryTextColor="@color/md_primary_text"
+        ease:cvsListSecondaryTextColor="@color/md_second_color"
+        ease:cvsListTimeTextColor="@color/md_second_color"
+        android:id="@+id/conversation_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.yuantian.com.easeuitransplant.EaseConversationList>
+    <LinearLayout
+        android:id="@+id/empty_message"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:src="@drawable/empty_message"
+            android:layout_width="@dimen/dimen_128_dp"
+            android:layout_height="@dimen/dimen_128_dp" />
+        <TextView
+            android:text="还没有人给你发私信呢"
+            android:textSize="@dimen/md_regular_text_size"
+            android:textColor="@color/md_second_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

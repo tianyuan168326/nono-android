@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical" >
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/md_title_text_size"
+        android:text="@string/new_note_tips" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+    <android.support.design.widget.TextInputLayout  android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.AppCompatEditText android:id="@+id/new_note"
+            android:layout_width="match_parent"
+            android:minLines="1"
+            android:maxLines="3"
+            android:layout_height="wrap_content" android:hint="@string/prompt_note"
+            android:inputType="text"
+            android:singleLine="true" />
+    </android.support.design.widget.TextInputLayout>
+    <ImageButton
+        android:layout_width="wrap_content"   android:layout_height="wrap_content"
+        android:id="@+id/add_new_note" android:background="@mipmap/ic_add_grey600_48dp"></ImageButton>
+    </LinearLayout>
+</LinearLayout>

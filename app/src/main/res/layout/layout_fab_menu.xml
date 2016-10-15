@@ -1,0 +1,29 @@
+<LinearLayout
+    android:layout_marginRight="8dp"
+    android:clickable="false"
+    android:layout_gravity="end"
+    android:gravity="center_vertical|end"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_marginRight="2dp"
+        android:textColor="@color/abc_primary_text_material_dark"
+        android:textStyle="bold"
+        android:id="@+id/fab_menu_text"
+        android:text="123"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_menu_btn"
+        app:fabSize="mini"
+        app:backgroundTint="#fff"
+        android:layout_marginTop="@dimen/minfab_margin"
+        android:layout_marginBottom="@dimen/minfab_margin"
+        android:layout_marginLeft="@dimen/minfab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

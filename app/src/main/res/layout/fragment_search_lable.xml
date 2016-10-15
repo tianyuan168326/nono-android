@@ -1,0 +1,92 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_margin="4dp"
+    tools:context="com.seki.noteasklite.Fragment.Note.SearchLableFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/lable_hint"
+        app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/lable_hint_text"
+            android:textSize="@dimen/md_subhead_text_size"
+            android:layout_gravity="left"
+            android:text="要查看所有标签?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="@dimen/md_subhead_text_size"
+            android:layout_weight="1"
+            android:id="@+id/decollapse_tv"
+            android:textColor="@color/colorAccent"
+            android:gravity="right"
+            android:text="展开"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <me.next.tagview.TagCloudView
+            android:id="@+id/lable_cloud_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tcvItemBorderHorizontal="8dp"
+            app:tcvItemBorderVertical="8dp"
+            app:tcvBorder="8dp"
+            app:tcvBackground="@drawable/tag_corner_bg"
+            app:tcvTextColor="@color/colorPrimary"
+            app:tcvSingleLine="false"
+            app:tcvCanTagClick="true"
+            />
+    <FrameLayout
+        android:id="@+id/lable_note_list_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="320dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:background="#eeeeee"
+                android:layout_marginTop="@dimen/dimen_8_dp"
+                android:layout_marginBottom="@dimen/dimen_8_dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:padding="@dimen/dimen_8_dp"
+                    app:civ_fill_color="@color/colorAccent"
+                    android:id="@+id/lable_note_back"
+                    android:src="@mipmap/ic_arrow_back_white_24dp"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp" />
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/tag_title"
+                    android:text="标签 下的笔记"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/md_subhead_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lable_note_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+    </FrameLayout>
+</FrameLayout>

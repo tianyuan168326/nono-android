@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:background="@color/black"
+        android:gravity="center_vertical"
+        android:id="@+id/span_toolbar"
+        android:orientation="horizontal" android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/indent"
+            android:text="tab"
+            android:textColor="@color/md_text"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/emphasis"
+            android:text="*"
+            android:textColor="@color/md_text"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/title"
+            android:text="#"
+            android:textColor="@color/md_text"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/del"
+            android:text="~~"
+            android:textColor="@color/md_text"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/dot"
+            android:text="-"
+            android:textColor="@color/md_text"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/link"
+            android:text="link"
+            android:textColor="@color/md_text"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/image"
+            android:text="image"
+            android:textColor="@color/md_text"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/quote"
+            android:text=">"
+            android:textColor="@color/md_text"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/mark"
+            android:text="`"
+            android:textColor="@color/md_text"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/code"
+            android:text="```"
+            android:textColor="@color/md_text"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+    </LinearLayout>
+</HorizontalScrollView>

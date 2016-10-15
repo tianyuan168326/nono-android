@@ -1,0 +1,170 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<android.support.design.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/root">
+        <android.support.design.widget.AppBarLayout
+            android:background="?attr/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_256_dp">
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapse_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleMarginStart="48dp"
+                app:expandedTitleTextAppearance="@color/image_shadow_color"
+                app:statusBarScrim="@android:color/transparent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                <!--封面图片-->
+                <!--<ImageView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:scaleType="centerCrop"-->
+                    <!--android:src="@drawable/banner"-->
+                    <!--app:layout_collapseMode="parallax"-->
+                    <!--app:layout_collapseParallaxMultiplier="0.7"  />-->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:background="@color/md_text"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.7"
+                    android:fitsSystemWindows="true"
+                    android:id="@+id/bg_image"
+                    app:placeholderImage="@drawable/banner"
+                    app:placeholderImageScaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                    <View
+                        android:background="@color/image_shadow_color"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <LinearLayout
+                        android:layout_marginRight="@dimen/dimen_32_dp"
+                        android:orientation="vertical"
+                        android:layout_gravity="right|center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/reel_title"
+                            android:textColor="@color/md_text"
+                            android:text="我的文集"
+                            android:textSize="@dimen/md_title_text_size"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/reel_abstract_tv"
+                            android:layout_marginTop="@dimen/dimen_16_dp"
+                            android:textColor="@color/md_text"
+                            android:text="我的生活，我的生活，我的生活，我的生活，"
+                            android:textSize="@dimen/md_regular_text_size"
+                            android:layout_width="@dimen/dimen_192_dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </FrameLayout>
+                <android.support.v7.widget.Toolbar
+                    app:layout_collapseMode="pin"
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"/>
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+         <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+             <include
+                 layout="@layout/recycle_view"/>
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_bar"
+        android:background="@color/fab_overlay_apprent"
+        android:clickable="true"
+        android:visibility="gone" />
+    <io.codetail.widget.RevealFrameLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dimen_8_dp"
+        android:layout_marginBottom="@dimen/dimen_8_dp"
+        android:layout_gravity="bottom|right">
+        <LinearLayout
+            android:padding="@dimen/dimen_8_dp"
+            android:visibility="invisible"
+            android:id="@+id/fab_op_pannel"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:paddingTop="@dimen/dimen_16_dp"
+                android:paddingBottom="@dimen/dimen_8_dp"
+                android:background="?attr/selectableItemBackground"
+                android:id="@+id/btn_md"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.seki.noteasklite.CustomControl.TintImageView
+                    app:tintColor="@color/primary"
+                    android:src="@mipmap/fab_markdown"
+                    android:layout_width="@dimen/dimen_32_dp"
+                    android:layout_height="@dimen/dimen_32_dp" />
+                <TextView
+                    android:layout_margin="@dimen/dimen_8dp"
+                    android:text="MarkDown"
+                    android:textSize="@dimen/md_subhead_text_size"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="@dimen/dimen_8_dp"
+                android:paddingBottom="@dimen/dimen_16_dp"
+                android:background="?attr/selectableItemBackground"
+                android:id="@+id/btn_text"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.seki.noteasklite.CustomControl.TintImageView
+                    app:tintColor="@color/primary"
+                    android:padding="@dimen/dimen_4_dp"
+                    android:src="@mipmap/fab_text"
+                    android:layout_width="@dimen/dimen_32_dp"
+                    android:layout_height="@dimen/dimen_32_dp" />
+                <TextView
+                    android:layout_margin="@dimen/dimen_8dp"
+                    android:text="富文本"
+                    android:textSize="@dimen/md_subhead_text_size"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </io.codetail.widget.RevealFrameLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:layout_margin="@dimen/fab_margin"
+        android:id="@+id/group_note_fab_add"
+        android:src="@mipmap/ic_add_white_48dp"
+        app:borderWidth="0dp"
+        android:layout_gravity="bottom|end"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
+</FrameLayout>

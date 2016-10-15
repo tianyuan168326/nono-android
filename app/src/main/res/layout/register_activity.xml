@@ -1,0 +1,161 @@
+<?xml version = "1.0" encoding ="UTF-8" ?>
+<FrameLayout
+    android:theme="@style/AppTheme.NoActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:TextInputLayoutWithDrawable="http://schemas.android.com/tools"
+    xmlns:clean="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/bg"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+            <FrameLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_gravity="center_horizontal|center_vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:paddingLeft="48dp"
+                        android:background="@color/colorPrimaryLight"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_marginTop="16dp"
+
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_launcher_noteasklite2"/>
+                            <TextView
+                                android:layout_marginLeft="24dp"
+                                android:layout_gravity="center"
+                                android:text="加入NONo"
+                                android:textSize="@dimen/md_big_title_text_size"
+                                android:textColor="@color/md_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="left"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginTop="16dp"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="@dimen/md_title_text_size"
+                                android:textColor="@color/colorAccent"
+                                android:text="N"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:textSize="@dimen/md_title_text_size"
+                                android:textColor="@color/md_text"
+                                android:text="ot "
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:textSize="@dimen/md_title_text_size"
+                                android:textColor="@color/colorAccent"
+                                android:text="O"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:textSize="@dimen/md_title_text_size"
+                                android:textColor="@color/md_text"
+                                android:text="nly "
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:textSize="@dimen/md_title_text_size"
+                                android:textColor="@color/colorAccent"
+                                android:text="No"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:textSize="@dimen/md_title_text_size"
+                                android:textColor="@color/md_text"
+                                android:text="te -- 不只是笔记"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <FrameLayout
+                                android:layout_margin="@dimen/dimen_8_dp"
+                                android:id="@+id/container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            </FrameLayout>
+                            <LinearLayout
+                                android:layout_margin="16dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="36dp">
+                                <TextView
+                                    android:id="@+id/info_tv"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="@dimen/md_regular_text_size"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="match_parent" />
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/next_btn"
+                                    android:background="@drawable/circle_bg"
+                                    android:src="@mipmap/ic_arrow_forward_white_36dp"
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:layout_gravity="right"
+                                    android:adjustViewBounds="true"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+                </LinearLayout>
+                <ProgressBar
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:id="@+id/register_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?android:attr/progressBarStyleLarge"/>
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+    <android.support.design.widget.FloatingActionButton
+        android:src="@mipmap/ic_send_white_36dp"
+        android:visibility="invisible"
+        android:id="@+id/register_fab"
+        app:elevation="6dp"
+        app:fabSize="normal"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</FrameLayout>

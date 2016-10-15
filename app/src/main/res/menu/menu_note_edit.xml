@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.example.notedemo.Activity.NoteEditActivity">
+      <item android:id="@+id/action_undo"
+          android:title="@string/action_undo"
+          android:icon="@mipmap/ic_undo_white_24dp"
+          android:orderInCategory="100"
+          app:showAsAction="always"/>
+      <item android:id="@+id/action_lable"
+            android:title="@string/action_lable"
+            android:icon="@mipmap/ic_loyalty_white_24dp"
+            android:orderInCategory="100"
+            app:showAsAction="always"/>
+
+      <item android:id="@+id/action_change_bg_color"
+          android:icon="@drawable/ic_format_color_fill_white_24dp"
+            android:title="@string/action_change_bg_color"
+            android:orderInCategory="100"
+            app:showAsAction="always"/>
+      <item android:id="@+id/action_save"
+          android:title="@string/action_save"
+          android:icon="@mipmap/ic_save_white_24dp"
+          android:orderInCategory="100"
+          app:showAsAction="never"/>
+      <item android:id="@+id/action_help"
+          android:title="@string/action_help"
+          android:orderInCategory="100"
+          app:showAsAction="never"/>
+</menu>

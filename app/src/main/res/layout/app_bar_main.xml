@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/content_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<android.support.design.widget.CoordinatorLayout android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity"
+    android:fitsSystemWindows="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <android.support.design.widget.AppBarLayout android:id="@+id/app_bar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/AppTheme.AppBarOverlay">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:gravity="right|center_vertical"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+                 app:popupTheme="@style/AppTheme.PopupOverlay" >
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:background="?android:actionBarItemBackground"
+                    android:layout_gravity="right"
+                    android:padding="8dp"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/action_toogle_table_list"
+                    android:src="@drawable/ic_view_module_white_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:background="?android:actionBarItemBackground"
+                    android:layout_gravity="right"
+                    android:padding="8dp"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/action_message"
+                    android:src="@mipmap/ic_notifications_white_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:background="?android:actionBarItemBackground"
+                    android:layout_gravity="right"
+                    android:padding="8dp"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/action_search"
+                    android:src="@mipmap/ic_search_white_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                </android.support.v7.widget.Toolbar>
+            </android.support.design.widget.AppBarLayout>
+        <FrameLayout
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_bar"
+        android:background="@color/fab_overlay"
+        android:clickable="true"
+        android:visibility="gone" />
+    <io.codetail.widget.RevealFrameLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dimen_8_dp"
+        android:layout_marginBottom="@dimen/dimen_8_dp"
+        android:layout_gravity="bottom|right">
+
+        <LinearLayout
+            android:padding="@dimen/dimen_8_dp"
+            android:visibility="invisible"
+            android:id="@+id/fab_op_pannel"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:paddingTop="@dimen/dimen_16_dp"
+                android:paddingBottom="@dimen/dimen_8_dp"
+                android:background="?attr/selectableItemBackground"
+                android:id="@+id/btn_new_label"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.seki.noteasklite.CustomControl.TintImageView
+                    app:tintColor="@color/primary"
+                    android:src="@mipmap/ic_loyalty_white_24dp"
+                    android:layout_width="@dimen/dimen_32_dp"
+                    android:layout_height="@dimen/dimen_32_dp" />
+                <TextView
+                    android:layout_margin="@dimen/dimen_8dp"
+                    android:text="新的标签"
+                    android:textSize="@dimen/md_subhead_text_size"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        <LinearLayout
+            android:paddingTop="@dimen/dimen_16_dp"
+            android:paddingBottom="@dimen/dimen_8_dp"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/btn_new_group"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.seki.noteasklite.CustomControl.TintImageView
+                app:tintColor="@color/primary"
+                android:src="@drawable/ic_library_books_white_24dp"
+                android:layout_width="@dimen/dimen_32_dp"
+                android:layout_height="@dimen/dimen_32_dp" />
+            <TextView
+                android:layout_margin="@dimen/dimen_8dp"
+                android:text="新的文集"
+                android:textSize="@dimen/md_subhead_text_size"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="@dimen/dimen_16_dp"
+                android:paddingBottom="@dimen/dimen_8_dp"
+                android:background="?attr/selectableItemBackground"
+                android:id="@+id/btn_md"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.seki.noteasklite.CustomControl.TintImageView
+                    app:tintColor="@color/primary"
+                    android:src="@mipmap/fab_markdown"
+                    android:layout_width="@dimen/dimen_32_dp"
+                    android:layout_height="@dimen/dimen_32_dp" />
+                <TextView
+                    android:layout_margin="@dimen/dimen_8dp"
+                    android:text="MarkDown"
+                    android:textSize="@dimen/md_subhead_text_size"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="@dimen/dimen_8_dp"
+                android:paddingBottom="@dimen/dimen_16_dp"
+                android:background="?attr/selectableItemBackground"
+                android:id="@+id/btn_text"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.seki.noteasklite.CustomControl.TintImageView
+                    app:tintColor="@color/primary"
+                    android:padding="@dimen/dimen_4_dp"
+                    android:src="@mipmap/fab_text"
+                    android:layout_width="@dimen/dimen_32_dp"
+                    android:layout_height="@dimen/dimen_32_dp" />
+                <TextView
+                    android:layout_margin="@dimen/dimen_8dp"
+                    android:text="富文本"
+                    android:textSize="@dimen/md_subhead_text_size"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </io.codetail.widget.RevealFrameLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/note_fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_add_white_48dp"
+        android:layout_gravity="bottom|right"
+        app:borderWidth="0dp"
+        android:layout_margin="@dimen/fab_margin"
+        />
+</android.support.design.widget.CoordinatorLayout>
+</FrameLayout>

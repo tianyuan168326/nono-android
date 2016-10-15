@@ -1,0 +1,109 @@
+<resources>
+    <!--begin our style-->
+    <style name="primaryTitle">
+        <item name="android:textSize">@dimen/md_regular_text_size</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="notify_name_text">
+        <item name="android:textSize">@dimen/md_regular_text_size</item>
+        <item name="android:textColor">@color/zhihu_notify_name_color</item>
+    </style>
+
+    <style name="notify_title_text">
+        <item name="android:textSize">@dimen/md_regular_text_size</item>
+        <item name="android:textColor">@color/md_primary_text</item>
+    </style>
+
+    <style name="notify_detail_text">
+        <item name="android:textSize">@dimen/md_subhead_text_size</item>
+        <item name="android:textColor">@color/md_primary_text</item>
+    </style>
+
+    <style name="userinfoCardItem">
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="userinfoCardItemNameTextView">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/primary_text_default_material_light</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="questionDetailCollapseStyle">
+        <item name="android:textColor">@color/md_text</item>
+        <item name="android:textSize">@dimen/md_title_text_size</item>
+    </style>
+    <!--end our style-->
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
+    <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+    <!--<item name="windowActionModeOverlay">true</item>-->
+    <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+    <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+    <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--<item name="android:windowAnimationStyle">@style/AnimationActivity</item>-->
+    <!--</style>-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowActionModeOverlay">true</item>
+        <item name="colorPrimary">@color/skin_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/skin_colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+    </style>
+
+    <style name="GeniusPlashTheme" parent="AppTheme">
+        <item name="android:homeAsUpIndicator">@drawable/ic_menu_white_24dp</item> <!--返回icon-->
+    </style>
+
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:activityOpenEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <!-- 开启转场动画功能 -->
+        <item name="android:windowContentTransitions">true</item>
+
+        <!-- 入场动画 -->
+        <item name="android:windowEnterTransition">@android:transition/explode</item>
+        <!-- 出场动画 -->
+        <item name="android:windowExitTransition">@android:transition/explode</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.Translucent">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ThemeActivity" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Widget.Design.AppBarLayout" parent="android:Widget">
+        <item name="elevation">0dp</item>
+        <item name="android:background">?attr/colorPrimary</item>
+    </style>
+
+</resources>

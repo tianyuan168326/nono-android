@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="settings_values_summary_card_line_num" >
+    <item>当前为小卡片样式</item>
+    <item>当前为中卡片样式</item>
+    <item>当前为大卡片样式</item>
+    </string-array>
+    <string-array name="settings_entry_values_card_line_num" >
+        <item>2</item>
+        <item>4</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="settings_entries_card_line_num" >
+        <item>小</item>
+        <item>中</item>
+        <item>大</item>
+    </string-array>
+</resources>

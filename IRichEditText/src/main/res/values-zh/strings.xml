@@ -1,0 +1,7 @@
+<resources>
+    <string name="photo_note">注释</string>
+    <string name="photo_change">更换</string>
+    <string name="select_photo">点击选择图片</string>
+    <string name="view_photo">大图</string>
+    <string name="photo_delete">删除</string>
+</resources>

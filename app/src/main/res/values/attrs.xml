@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextInputLayoutWithDrawable">
+        <attr name="drawableColor" format="color" />
+        <attr name="drawableSrc" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="TintImageView">
+        <attr name="tintColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="SuperViewPager">
+        <attr name="is_scroll" format="boolean" />
+    </declare-styleable>
+        <declare-styleable name="CollapseOnScrollView">
+            <attr name="stayVisibleId" format="reference" />
+            <attr name="expandOnDragId" format="reference" />
+    </declare-styleable>
+</resources>

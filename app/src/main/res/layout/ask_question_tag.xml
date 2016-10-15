@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:id="@+id/ask_question_tag_text"
+    android:padding="2dp"
+    android:background="@drawable/grey_corner_line_bg"
+    tools:text="数据结构"
+    android:layout_marginRight="8dp"
+    android:textColor="@color/md_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" />

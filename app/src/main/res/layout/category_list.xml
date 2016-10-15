@@ -1,0 +1,10 @@
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/category_list_item"
+    android:gravity="center_vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/abc_dialog_list_padding_vertical_material"
+    android:paddingBottom="@dimen/abc_dialog_list_padding_vertical_material"
+    android:paddingLeft="@dimen/abc_dropdownitem_text_padding_left"
+    android:paddingRight="@dimen/abc_dropdownitem_text_padding_right"/>

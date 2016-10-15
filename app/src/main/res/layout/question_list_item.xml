@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@android:color/white"
+    android:layout_marginLeft="@dimen/dimen_2_dp"
+    android:layout_marginRight="@dimen/dimen_2_dp"
+    android:layout_marginTop="@dimen/dimen_4_dp"
+    app:cardCornerRadius="@dimen/dimen_2_dp"
+    app:cardElevation="@dimen/dimen_2_dp">
+
+    <LinearLayout
+        android:padding="@dimen/dimen_4_dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/question_list_item_main"/>
+            <include
+                layout="@layout/question_list_item_statics"/>
+        </LinearLayout>
+        <include layout="@layout/question_list_item_footer"/>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

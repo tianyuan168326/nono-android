@@ -1,0 +1,31 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.notedemo.Activity.DateNoteActivity">
+        <android.support.design.widget.AppBarLayout
+            android:background="?attr/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/toolbar"/>
+        </android.support.design.widget.AppBarLayout>
+        <include layout="@layout/recycle_view"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:clickable="true"
+        android:visibility="gone"
+        android:id="@+id/date_note_mask"
+        android:background="#a0000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+    <include layout="@layout/rapid_fab"/>
+</RelativeLayout>

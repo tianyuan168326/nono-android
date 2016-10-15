@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/nav_header_back"
+        android:scaleType="centerCrop"
+        android:src="@drawable/navigation_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_header_height" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_header_height"
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:orientation="vertical"
+        android:gravity="bottom">
+        <LinearLayout
+            android:id="@+id/head_img_view_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                fresco:roundingBorderWidth="1dp"
+                fresco:roundingBorderColor="#fff"
+                fresco:roundAsCircle="true"
+                android:scaleType="centerInside"
+                fresco:placeholderImage="@mipmap/ic_person_white_48dp"
+                android:layout_width="56dp" android:layout_height="74dp"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                android:id="@+id/head_img_view"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                />
+            <com.seki.noteasklite.CustomControl.TintImageView
+                android:id="@+id/head_setting"
+                android:scaleType="centerInside"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="top"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                android:src="@drawable/ic_settings_white_48dp"
+                fresco:tintColor="@color/colorPrimaryDark"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingTop="@dimen/nav_header_vertical_spacing" android:text="单击头像以登录"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        <LinearLayout
+            android:paddingBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                tools:text="武汉大学" android:id="@+id/university" />
+            <TextView
+                android:layout_marginLeft="4dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                tools:text="电子信箱" android:id="@+id/school" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

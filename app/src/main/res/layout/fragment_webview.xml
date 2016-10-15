@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:visibility="visible"
+        android:id="@+id/loading_bg"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        wheel:matProg_barWidth="4dp"
+        wheel:matProg_barColor="@color/colorAccent"
+        wheel:matProg_progressIndeterminate="true"
+        wheel:matProg_fillRadius="true" />
+    <ScrollView
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="invisible"
+        android:id="@+id/actual_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.seki.noteasklite.CustomControl.MarkDownWebView
+            android:background="@color/white"
+            android:id="@+id/web_view"
+            android:layout_width="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_height="wrap_content"/>
+</ScrollView>
+    </FrameLayout>
+
+

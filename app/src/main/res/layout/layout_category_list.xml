@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <LinearLayout
+        android:id="@+id/tag_set"
+        android:layout_margin="4dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:minWidth="16dp"
+        android:gravity="left|center_vertical"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+    </HorizontalScrollView>
+    <com.seki.noteasklite.CustomControl.TagSelector.TagAutoCompleteTextView
+        android:id="@+id/tag_search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/select_pic_dialog_layout"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/select_pic_btn_take_photo"
+        android:text="相机"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/abc_action_button_min_height_material"/>
+    <View
+        android:background="@color/md_divider_color"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <TextView
+        android:text="媒体库"
+        android:id="@+id/select_pic_btn_pick_photo"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/abc_action_button_min_height_material"/>
+    <View
+        android:background="@color/md_divider_color"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <TextView
+        android:id="@+id/select_pic_btn_cancel"
+        android:text="取消"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/abc_action_button_min_height_material"/>
+</LinearLayout>

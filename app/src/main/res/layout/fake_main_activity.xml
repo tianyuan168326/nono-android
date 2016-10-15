@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<android.support.design.widget.AppBarLayout android:id="@+id/app_bar"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:gravity="right|center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+            <ImageView
+                android:layout_centerVertical="true"
+                android:background="?android:actionBarItemBackground"
+                android:layout_gravity="right"
+                android:padding="8dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/action_more"
+                android:src="@drawable/ic_more_vert_white_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:background="?android:actionBarItemBackground"
+                android:layout_gravity="right"
+                android:padding="8dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/action_toogle_table_list"
+                android:src="@drawable/ic_view_module_white_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:background="?android:actionBarItemBackground"
+                android:layout_gravity="right"
+                android:padding="8dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/action_message"
+                android:src="@mipmap/ic_notifications_white_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:background="?android:actionBarItemBackground"
+                android:layout_gravity="right"
+                android:padding="8dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/action_search"
+                android:src="@mipmap/ic_search_white_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/loading_bg"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center"
+        app:matProg_barWidth="4dp"
+        app:matProg_barColor="@color/colorAccent"
+        app:matProg_progressIndeterminate="true"
+        app:matProg_fillRadius="true" />
+</FrameLayout>

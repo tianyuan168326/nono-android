@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@+id/login_form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.seki.noteasklite.Activity.LogOnActivity">
+        <!-- Login progress -->
+        <ProgressBar android:id="@+id/login_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" android:visibility="gone" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/butiful_bg"
+                android:scaleType="centerCrop"
+                android:id="@+id/bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.AppCompatTextView
+                    android:padding="64dp"
+                    android:text="登录"
+                    android:gravity="left"
+                    android:textSize="@dimen/md_big_text_size"
+                    android:textColor="@color/colorAccent"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/account_sign_in_button"
+                    android:background="@drawable/circle_bg"
+                    android:layout_marginRight="16dp"
+                    android:src="@mipmap/ic_arrow_forward_white_36dp"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    />
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:id="@+id/email_login_form" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical">
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_quick_log_on"
+                android:background="@android:drawable/list_selector_background"
+                android:layout_marginTop="8dp"
+                android:text="QQ快捷登陆"
+                android:layout_gravity="right"
+                android:textSize="@dimen/md_caption_text_size"
+                android:textColor="@color/colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <android.support.design.widget.TextInputLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatEditText android:id="@+id/account" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:hint="@string/prompt_account"
+                    android:inputType="text" android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/password" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:hint="@string/prompt_password"
+                    android:imeActionId="@+id/login"
+                    android:imeActionLabel="@string/action_sign_in"
+                    android:imeOptions="actionUnspecified" android:inputType="textPassword"
+                    android:maxLines="1" android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_find_password"
+                    android:background="@android:drawable/list_selector_background"
+                    android:layout_marginTop="8dp"
+                    android:text="忘记密码?"
+                    android:gravity="left"
+                    android:textSize="@dimen/md_caption_text_size"
+                    android:textColor="@color/colorAccent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/account_register_button"
+                style="?buttonBarPositiveButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/action_register" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

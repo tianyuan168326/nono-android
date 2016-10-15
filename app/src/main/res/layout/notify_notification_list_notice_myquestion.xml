@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:paddingLeft="@dimen/abc_list_item_padding_horizontal_material"
+    android:paddingRight="@dimen/abc_list_item_padding_horizontal_material"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:paddingTop="@dimen/abc_dialog_list_padding_vertical_material"
+        android:paddingBottom="@dimen/abc_dialog_list_padding_vertical_material"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/notify_notification_list_notice_myquestion_user_name"
+        android:theme="@style/notify_name_text"
+        tools:text="用户"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:theme="@style/notify_title_text"
+        android:text="刚刚关注了你的问题"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:background="?android:attr/selectableItemBackground"
+        android:id="@+id/notify_notification_list_notice_myquestion_abstract"
+        android:paddingTop="@dimen/abc_button_padding_vertical_material"
+        android:paddingBottom="@dimen/abc_button_padding_vertical_material"
+        android:theme="@style/notify_detail_text"
+        tools:text="问题摘要"
+        android:maxLines="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

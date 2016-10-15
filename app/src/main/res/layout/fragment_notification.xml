@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/empty_notification"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:src="@drawable/ic_notification_200px"
+            android:layout_width="@dimen/dimen_128_dp"
+            android:layout_height="@dimen/dimen_128_dp" />
+        <TextView
+            android:layout_margin="@dimen/dimen_8_dp"
+            android:textSize="@dimen/md_regular_text_size"
+            android:textColor="@color/md_second_color"
+            android:text="还没有任何关于你的通知哦"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:visibility="gone"
+            android:background="@drawable/md_light_highlight_corner_bg"
+            android:text="到社区看看?"
+            android:padding="@dimen/dimen_8_dp"
+            android:textColor="@color/md_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <include layout="@layout/notify_notification_listview"/>
+</android.support.design.widget.CoordinatorLayout>

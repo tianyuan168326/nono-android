@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:wheel="http://schemas.android.com/apk/res-auto">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+ 	<!--<include-->
+ 	    <!-- -->
+ 	     <!--layout="@layout/ask_header"/> -->
+	<!--<include-->
+		<!--layout = "@layout/ask_toolarea"/>-->
+	<LinearLayout
+		android:id="@+id/banner"
+		android:orientation="horizontal"
+		android:padding="12dp"
+		android:background="@color/colorPrimary"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+	<TextView
+		android:text="新问题来自"
+		android:id="@+id/static_title"
+		android:textColor="@color/md_text"
+		android:layout_marginRight="8dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+		<HorizontalScrollView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+		<LinearLayout
+			android:orientation="horizontal"
+			android:id="@+id/ask_question_tags"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+
+		</LinearLayout>
+		</HorizontalScrollView>
+	</LinearLayout>
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+    <com.malinskiy.superrecyclerview.SuperRecyclerView
+			android:id="@+id/ask_question_list"
+			android:scrollbars="vertical"
+			android:divider="@null"
+			android:dividerHeight="@dimen/dimen_4_dp"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+
+			app:recyclerClipToPadding="false"
+			app:recyclerPadding="@dimen/dimen_4_dp"
+			app:scrollbarStyle="insideInset">
+	</com.malinskiy.superrecyclerview.SuperRecyclerView>
+		<include
+			android:id="@+id/empty_view"
+			layout="@layout/layout_nodata_empty_view"
+			/>
+	</FrameLayout>
+
+</LinearLayout>
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:visibility="visible"
+        android:id="@+id/loading_bg"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        wheel:matProg_barWidth="4dp"
+        wheel:matProg_barColor="@color/colorAccent"
+        wheel:matProg_progressIndeterminate="true"
+        wheel:matProg_fillRadius="true" />
+</FrameLayout>

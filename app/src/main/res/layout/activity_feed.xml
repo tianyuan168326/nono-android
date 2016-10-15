@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.seki.testuser.ScrollActivity">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.seki.noteasklite.MyCollapsingToolbarLayout
+            android:id="@+id/collapsing"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.Toolbar
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                android:id="@+id/toolbar"
+                app:layout_collapseMode="pin"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+        </com.seki.noteasklite.MyCollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView
+            android:id="@+id/root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="@drawable/butiful_bg"
+            />
+        <LinearLayout
+            android:layout_gravity="center"
+
+            android:orientation="vertical"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            tools:context="com.seki.noteasklite.Activity.Ask.FeedActivity">
+            <TextView
+                android:id="@+id/info_tv"
+                android:textIsSelectable="true"
+                android:textColor="@color/md_primary_text"
+                android:textSize="@dimen/md_subhead_text_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="这是一个简单的笔记APP,里面可能会有比较多的bug,如果你发现，请抓紧时间反馈:)我会火速修复！你可以加入NONo内测群：543817980 ，也可以点击下面的按钮，进入我的主页和我私信！"/>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginRight="@dimen/dimen_16_dp"
+                    android:id="@+id/connect_me"
+                    android:layout_marginTop="@dimen/dimen_16_dp"
+                    android:layout_marginBottom="@dimen/dimen_16_dp"
+                    android:textColor="@color/md_text"
+                    android:padding="@dimen/dimen_8_dp"
+                    android:background="@drawable/accent_radius_soloid_bg"
+                    android:layout_gravity="center"
+                    android:text="联系开发者"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/copy_qqqun"
+                    android:layout_marginTop="@dimen/dimen_16_dp"
+                    android:layout_marginBottom="@dimen/dimen_16_dp"
+                    android:textColor="@color/md_text"
+                    android:padding="@dimen/dimen_8_dp"
+                    android:background="@drawable/accent_radius_soloid_bg"
+                    android:layout_gravity="center"
+                    android:text="复制内测群号"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,26 @@
+<com.wangjie.rapidfloatingactionbutton.RapidFloatingActionLayout
+    android:id="@+id/note_fab_add_layout"
+    rfal:rfal_frame_color="#fff"
+    rfal:rfal_frame_alpha="0.7"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rfal="http://schemas.android.com/apk/res-auto"
+    xmlns:rfab="http://schemas.android.com/apk/res-auto">
+    <com.wangjie.rapidfloatingactionbutton.RapidFloatingActionButton
+        android:id="@+id/note_fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        rfab:rfab_drawable="@mipmap/ic_add_white_48dp"
+        rfab:rfab_size="normal"
+        rfab:rfab_color_normal="@color/colorAccent"
+        rfab:rfab_color_pressed="#e91164"
+        rfab:rfab_shadow_radius="5dp"
+        rfab:rfab_shadow_color="#999999"
+        rfab:rfab_shadow_dx="0dp"
+        rfab:rfab_shadow_dy="5dp"/>
+</com.wangjie.rapidfloatingactionbutton.RapidFloatingActionLayout>

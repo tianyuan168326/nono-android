@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <ImageView
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_empty_note_256"
+        android:layout_width="196dp"
+        android:layout_height="196dp" />
+    <TextView
+        android:layout_margin="@dimen/dimen_8_dp"
+        android:textSize="@dimen/md_subhead_text_size"
+        android:textColor="@color/md_second_color"
+        android:text="一条笔记都木有"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

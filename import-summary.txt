@@ -1,0 +1,133 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* LICENSE
+* README.md
+* build.xml
+* hyphenate.sh
+* ic_launcher-web.png
+* proguard-project.txt
+* simpledemo\
+* simpledemo\.project
+* simpledemo\AndroidManifest.xml
+* simpledemo\ic_launcher-web.png
+* simpledemo\proguard-project.txt
+* simpledemo\project.properties
+* simpledemo\res\
+* simpledemo\res\color\
+* simpledemo\res\color\em_main_botton_text_color.xml
+* simpledemo\res\drawable-hdpi\
+* simpledemo\res\drawable-hdpi\em_contact_list_normal.png
+* simpledemo\res\drawable-hdpi\em_contact_list_selected.png
+* simpledemo\res\drawable-hdpi\em_conversation_normal.png
+* simpledemo\res\drawable-hdpi\em_conversation_selected.png
+* simpledemo\res\drawable-hdpi\em_settings_normal.png
+* simpledemo\res\drawable-hdpi\em_settings_selected.png
+* simpledemo\res\drawable-hdpi\em_unread_count_bg.9.png
+* simpledemo\res\drawable-hdpi\ic_launcher.png
+* simpledemo\res\drawable-mdpi\
+* simpledemo\res\drawable-mdpi\ic_launcher.png
+* simpledemo\res\drawable-xhdpi\
+* simpledemo\res\drawable-xhdpi\ic_launcher.png
+* simpledemo\res\drawable-xxhdpi\
+* simpledemo\res\drawable-xxhdpi\ic_launcher.png
+* simpledemo\res\drawable\
+* simpledemo\res\drawable\em_main_bottom_item_bg.xml
+* simpledemo\res\drawable\em_tab_chat_bg.xml
+* simpledemo\res\drawable\em_tab_contact_list_bg.xml
+* simpledemo\res\drawable\em_tab_setting_bg.xml
+* simpledemo\res\layout\
+* simpledemo\res\layout\activity_chat.xml
+* simpledemo\res\layout\activity_login.xml
+* simpledemo\res\layout\activity_main.xml
+* simpledemo\res\layout\fragment_settings.xml
+* simpledemo\res\values-w820dp\
+* simpledemo\res\values-w820dp\dimens.xml
+* simpledemo\res\values\
+* simpledemo\res\values\dimens.xml
+* simpledemo\res\values\strings.xml
+* simpledemo\src\
+* simpledemo\src\com\
+* simpledemo\src\com\hyphenate\
+* simpledemo\src\com\hyphenate\easeuisimpledemo\
+* simpledemo\src\com\hyphenate\easeuisimpledemo\DemoApplication.java
+* simpledemo\src\com\hyphenate\easeuisimpledemo\ui\
+* simpledemo\src\com\hyphenate\easeuisimpledemo\ui\ChatActivity.java
+* simpledemo\src\com\hyphenate\easeuisimpledemo\ui\LoginActivity.java
+* simpledemo\src\com\hyphenate\easeuisimpledemo\ui\MainActivity.java
+* simpledemo\src\com\hyphenate\easeuisimpledemo\ui\SettingsFragment.java
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:19.+
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => easeUI\src\main\AndroidManifest.xml
+* libs\arm64-v8a\libBaiduMapSDK_base_v3_6_1.so => easeUI\src\main\jniLibs\arm64-v8a\libBaiduMapSDK_base_v3_6_1.so
+* libs\arm64-v8a\libBaiduMapSDK_map_v3_6_1.so => easeUI\src\main\jniLibs\arm64-v8a\libBaiduMapSDK_map_v3_6_1.so
+* libs\arm64-v8a\libBaiduMapSDK_util_v3_6_1.so => easeUI\src\main\jniLibs\arm64-v8a\libBaiduMapSDK_util_v3_6_1.so
+* libs\arm64-v8a\libeasemob_jni.so => easeUI\src\main\jniLibs\arm64-v8a\libeasemob_jni.so
+* libs\arm64-v8a\libhyphenate.so => easeUI\src\main\jniLibs\arm64-v8a\libhyphenate.so
+* libs\arm64-v8a\liblocSDK6a.so => easeUI\src\main\jniLibs\arm64-v8a\liblocSDK6a.so
+* libs\armeabi\libBaiduMapSDK_base_v3_6_1.so => easeUI\src\main\jniLibs\armeabi\libBaiduMapSDK_base_v3_6_1.so
+* libs\armeabi\libBaiduMapSDK_map_v3_6_1.so => easeUI\src\main\jniLibs\armeabi\libBaiduMapSDK_map_v3_6_1.so
+* libs\armeabi\libBaiduMapSDK_util_v3_6_1.so => easeUI\src\main\jniLibs\armeabi\libBaiduMapSDK_util_v3_6_1.so
+* libs\armeabi\libbspatch.so => easeUI\src\main\jniLibs\armeabi\libbspatch.so
+* libs\armeabi\libeasemob_jni.so => easeUI\src\main\jniLibs\armeabi\libeasemob_jni.so
+* libs\armeabi\libhyphenate.so => easeUI\src\main\jniLibs\armeabi\libhyphenate.so
+* libs\armeabi\liblocSDK6a.so => easeUI\src\main\jniLibs\armeabi\liblocSDK6a.so
+* libs\armeabi\libvi_voslib.so => easeUI\src\main\jniLibs\armeabi\libvi_voslib.so
+* libs\BaiduLBS_Android.jar => easeUI\libs\BaiduLBS_Android.jar
+* libs\glide-3.6.1.jar => easeUI\libs\glide-3.6.1.jar
+* libs\google-play-services.jar => easeUI\libs\google-play-services.jar
+* libs\hyphenatechat_3.0.1.jar => easeUI\libs\hyphenatechat_3.0.1.jar
+* libs\org.apache.http.legacy.jar => easeUI\libs\org.apache.http.legacy.jar
+* res\ => easeUI\src\main\res\
+* src\ => easeUI\src\main\java\
+
+Missing Android Support Repository:
+-----------------------------------
+Some useful libraries, such as the Android Support Library, are
+installed from a special Maven repository, which should be installed
+via the SDK manager.
+
+It looks like this library is missing from your SDK installation at:
+null
+
+To install it, open the SDK manager, and in the Extras category,
+select "Android Support Repository". You may also want to install the
+"Google Repository" if you want to use libraries like Google Play
+Services.
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    app:cardBackgroundColor="#fff"
+    android:layout_marginRight="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginBottom="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/title"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="@dimen/abc_text_size_caption_material"
+            tools:text="回答了问题"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:divider="?attr/dividerVertical"
+            app:showDividers="middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/subtitle"
+                android:textSize="@dimen/md_subhead_text_size"
+                android:textStyle="bold"
+                android:textColor="@color/abc_primary_text_material_light"
+                tools:text="变出一片小清凉吧"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text"
+                android:maxLines="6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </android.support.v7.widget.LinearLayoutCompat>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

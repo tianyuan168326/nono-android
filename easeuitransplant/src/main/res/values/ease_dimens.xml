@@ -1,0 +1,39 @@
+<resources>
+
+     <dimen name="height_top_bar">46dp</dimen>
+    <dimen name="padding_search_bar">5dp</dimen>
+    <dimen name="height_row_weixin">59dp</dimen>
+    <dimen name="size_avatar">48dp</dimen>
+    <dimen name="margin_chat_activity">5dp</dimen>
+    <dimen name="field_textsize">14sp</dimen>
+    <dimen name="field_margin_right">5dp</dimen>
+    <dimen name="call_button_padding_vertical">10dp</dimen>
+    <dimen name="call_button_padding_left">25dp</dimen>
+    <dimen name="call_button_padding_right">25dp</dimen>
+    <dimen name="sidebar_text_size">10dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+     <dimen name="image_thumbnail_size">100dp</dimen>
+    <dimen name="image_thumbnail_spacing">1dp</dimen>
+	<dimen name="chat_nick_margin_left">12dp</dimen>
+	<dimen name="chat_nick_text_size">13sp</dimen>
+
+
+    <dimen name="md_big_text_size">34sp</dimen>
+    <dimen name="md_big_title_text_size">24sp</dimen>
+    <dimen name="md_title_text_size">20sp</dimen>
+    <dimen name="md_subhead_text_size">16sp</dimen>
+    <dimen name="md_regular_text_size">14sp</dimen>
+    <dimen name="md_caption_text_size">12sp</dimen>
+
+    <dimen name="md_ball_text_size">8sp</dimen>
+
+    <dimen name="general_caption_margin">3dip</dimen>
+
+    <dimen name="dimen_2_dp">2dp</dimen>
+    <dimen name="dimen_4_dp">4dp</dimen>
+    <dimen name="dimen_8_dp">8dp</dimen>
+    <dimen name="dimen_16_dp">16dp</dimen>
+    <dimen name="dimen_32_dp">32dp</dimen>
+    <dimen name="dimen_64_dp">64dp</dimen>
+</resources>

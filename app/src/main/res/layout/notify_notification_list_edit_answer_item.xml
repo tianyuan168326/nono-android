@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginRight="@dimen/activity_horizontal_margin_half"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin_half"
+    android:layout_marginBottom="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:paddingLeft="@dimen/abc_list_item_padding_horizontal_material"
+    android:paddingRight="@dimen/abc_list_item_padding_horizontal_material"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_marginTop="@dimen/dimen_8_dp"
+        android:layout_marginBottom="@dimen/dimen_8_dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/notify_notification_list_edit_answer_item_user_name"
+            android:theme="@style/notify_name_text"
+            tools:text="用户"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:theme="@style/notify_title_text"
+            android:text="修改了这个答案"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:background="?android:attr/selectableItemBackground"
+        android:id="@+id/notify_notification_list_edit_answer_item_question_abstract"
+        android:theme="@style/notify_detail_text"
+        tools:text="问题摘要"
+        android:maxLines="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <include layout="@layout/divider_horiz"/>
+    <TextView
+        android:background="?android:attr/selectableItemBackground"
+        android:id="@+id/notify_notification_list_edit_answer_item_answer"
+        android:layout_marginTop="@dimen/dimen_8_dp"
+        android:layout_marginBottom="@dimen/dimen_8_dp"
+        android:maxLines="3"
+        android:theme="@style/notify_detail_text"
+        tools:text="答案摘要"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+    </android.support.v7.widget.CardView>

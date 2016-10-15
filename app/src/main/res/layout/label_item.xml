@@ -1,0 +1,53 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginRight="@dimen/dimen_4_dp"
+    android:layout_marginLeft="@dimen/dimen_4_dp"
+    android:layout_marginBottom="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:padding="@dimen/dimen_4_dp"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="@dimen/md_subhead_text_size"
+                android:textColor="@color/md_primary_text"
+                android:id="@+id/label_name"
+                tools:text="标签"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_marginTop="@dimen/dimen_4_dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/md_second_color"
+                    android:textSize="@dimen/md_regular_text_size"
+                    android:id="@+id/label_note_num"
+                    tools:text="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/md_second_color"
+                    android:textSize="@dimen/md_regular_text_size"
+                    tools:text=" 笔记"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.seki.noteasklite.CustomControl.TintImageView
+            android:id="@+id/label_icon"
+            app:tintColor="@color/image_gray_light"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_loyalty_white_24dp"
+            android:layout_width="@dimen/dimen_24_dp"
+            android:layout_height="@dimen/dimen_24_dp" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+     <group>
+          <!--<item android:id="@+id/nav_note_new" android:icon="@mipmap/ic_add_grey600_48dp"-->
+               <!--android:title="记下"/>-->
+         <item android:id="@+id/nav_recycle_bin" android:icon="@drawable/ic_recycle_bin_200"
+             android:checkable="true" android:checked="false"
+             android:title="回收站"/>
+      </group>
+
+    <item android:title="笔记">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_note_all" android:icon="@mipmap/ic_list_grey600_48dp"
+                    android:title="全部" />
+                <item android:id="@+id/nav_note_group" android:icon="@mipmap/ic_my_library_books_grey600_48dp"
+                    android:title="文集" />
+                <item android:id="@+id/nav_note_date" android:icon="@mipmap/ic_filter_7_grey600_48dp"
+                    android:title="日期" />
+                <item android:id="@+id/nav_note_label" android:icon="@mipmap/ic_loyalty_white_24dp"
+                    android:title="标签" />
+                <item android:id="@+id/nav_quickask_question" android:icon="@drawable/ic_book_grey_600_48dp"
+                    android:title="答记" />
+            </group>
+        </menu>
+    </item>
+</menu>

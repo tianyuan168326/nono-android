@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.seki.noteasklite">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 必选 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_noteasklite2"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Activity.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Activity.Note.ReelNoteActivity"
+            android:label="@string/title_activity_group_note"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TestRom.TestRoom"
+            android:label="@string/title_activity_group_note"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SelectPicActivity"
+            android:label="@string/title_activity_group_note"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Note.AuthActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.EditInfoActivity"
+            android:label="@string/edit_info"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+        android:name=".Activity.Note.NoteDetailActivity"
+        android:label="@string/title_activity_note_detail"
+        android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Note.NoteDetailBaseActivity"
+            android:label="@string/title_activity_note_detail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Ask.InnerQuestionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".Activity.Ask.NotifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Note.NoteEditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateVisible">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.SEND" /> -->
+            <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+            <!-- <data android:mimeType="image/*" /> -->
+            <!-- </intent-filter> -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.SEND_MULTIPLE" /> -->
+            <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+            <!-- <data android:mimeType="image/*" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".Activity.LogOnActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Activity.UserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Ask.AnswerInputActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Ask.AnswerDetailHTMLActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".Activity.Ask.InnerQuestionAnswerCommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Note.LabelNoteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.PreferenceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Ask.LockActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/GeniusPlashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".broadcastreceiver.NetWorkReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".broadcastreceiver.DownloadReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+                <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED" />
+            </intent-filter>
+        </receiver>
+        <!-- bughd配置 -->
+        <meta-data
+            android:name="BUG_HD_SDK_GENERAL_KEY"
+            android:value="38bd3638cfbb282b1772dbf6a86ad797" />
+        <!-- 设置环信应用的appkey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="nono#nono" />
+        <!-- 声明sdk所需的service SDK核心功能 -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true" />
+        <!-- 声明sdk所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name=".MyPhotoContentProvider"
+            android:authorities="com.seki.noteasklite.myphotocontentprovider"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".Activity.ChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Ask.FeedActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5700e0e167e58e2701001d0e" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="CoolApk" />
+
+        <activity
+            android:name=".Activity.FindPasswordActivity"
+            android:label="@string/title_activity_find_password"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <receiver android:name=".Widget.Basic.Provider.NoteListWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.seki.noteasklite.Controller.NoteController.NoteChangBroadCast" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.seki.noteasklite.Widget.Provider.COLLECTION_VIEW_ACTION" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_note_list" />
+        </receiver>
+
+        <service
+            android:name=".Widget.Basic.Service.NoteListWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <activity android:name=".Activity.Ask.CommunityEditActivity" />
+        <!-- 腾讯登陆入口 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="1105234183" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".Activity.Note.MarkdownNoteEditActivity"
+            android:label="@string/title_activity_markdown"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activity.Note.MarkDownNoteDetailActivity"
+            android:label="@string/title_activity_markdown"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Activity.Note.NoteReelEditActivity"></activity>
+
+    </application>
+
+</manifest>

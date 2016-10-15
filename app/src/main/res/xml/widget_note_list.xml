@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="128dp"
+    android:minHeight="128dp"
+    android:updatePeriodMillis="86400000"
+    android:previewImage="@drawable/ic_launcher_noteasklite2"
+    android:initialLayout="@layout/layout_widget_note_list"
+    android:resizeMode="horizontal|vertical"
+    android:widgetCategory="home_screen">
+</appwidget-provider>

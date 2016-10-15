@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/root_frame"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:id="@+id/root"
+        android:visibility="invisible"
+        tools:context="com.seki.noteasklite.Activity.Ask.LockActivity">
+        <ImageView
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/dimen_32_dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/auth_img"
+            android:src="@drawable/ic_launcher_noteasklite2"
+            android:layout_width="@dimen/dimen_96_dp"
+            android:layout_height="@dimen/dimen_96_dp" />
+        <TextView
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/md_subhead_text_size"
+            android:id="@+id/auth_hint"
+            android:text="请绘制您的手势密码"
+            android:textColor="@color/md_second_color"
+            android:layout_below="@id/auth_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <FrameLayout
+            android:layout_below="@id/auth_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <com.takwolf.android.lock9.Lock9View
+
+            android:id="@+id/auth_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:layout_gravity="center"
+            app:lock9_nodeSrc="@drawable/node_small_normal"
+            app:lock9_nodeOnSrc="@drawable/node_small_active"
+            app:lock9_nodeOnAnim="@anim/node_on_2"
+            app:lock9_nodeSize="16dp"
+            app:lock9_nodeAreaExpand="24dp"
+            app:lock9_lineColor="?attr/colorPrimary"
+            app:lock9_lineWidth="4dp"
+            app:lock9_autoLink="true"
+            app:lock9_enableVibrate="true"
+            app:lock9_vibrateTime="20" />
+            <com.dpizarro.pinview.library.PinView
+                android:id="@+id/auth_control_pin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:password="true"
+                app:numberPinBoxes="4"
+                app:split="-"
+                app:numberCharacters="1"
+                app:deleteOnClick="true"
+                app:keyboardMandatory="true"
+                app:nativePinBox="false"
+                app:colorSplit="@color/colorAccent"
+                />
+        </FrameLayout>
+    </RelativeLayout>
+     <android.support.v7.widget.Toolbar
+          android:id="@+id/toolbar"
+          android:background="@color/colorPrimary"
+          android:theme="@style/AppTheme.AppBarOverlay"
+          android:gravity="right|center_vertical"
+          android:layout_width="match_parent"
+          android:layout_height="?attr/actionBarSize"
+          app:popupTheme="@style/AppTheme.PopupOverlay" >
+          <ImageView
+               android:layout_centerVertical="true"
+               android:background="?android:actionBarItemBackground"
+               android:layout_gravity="right"
+               android:padding="8dp"
+               android:scaleType="centerCrop"
+               android:id="@+id/action_more"
+               android:src="@drawable/ic_more_vert_white_24dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+          <ImageView
+               android:layout_centerVertical="true"
+               android:background="?android:actionBarItemBackground"
+               android:layout_gravity="right"
+               android:padding="8dp"
+               android:scaleType="centerCrop"
+               android:id="@+id/action_toogle_table_list"
+               android:src="@drawable/ic_view_module_white_24dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+          <ImageView
+               android:layout_centerVertical="true"
+               android:background="?android:actionBarItemBackground"
+               android:layout_gravity="right"
+               android:padding="8dp"
+               android:scaleType="centerCrop"
+               android:id="@+id/action_message"
+               android:src="@mipmap/ic_notifications_white_24dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+
+
+          <ImageView
+               android:layout_centerVertical="true"
+               android:background="?android:actionBarItemBackground"
+               android:layout_gravity="right"
+               android:padding="8dp"
+               android:scaleType="centerCrop"
+               android:id="@+id/action_search"
+               android:src="@mipmap/ic_search_white_24dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+      </android.support.v7.widget.Toolbar>
+    <com.seki.noteasklite.CustomControl.WheelSurfaceView
+        android:id="@+id/loading_bg"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center"
+        android:background="?android:attr/colorBackground"
+        app:matProg_barWidth="4dp"
+        app:matProg_barColor="@color/colorAccent"
+        app:matProg_progressIndeterminate="true"
+        app:matProg_fillRadius="true" />
+</FrameLayout>

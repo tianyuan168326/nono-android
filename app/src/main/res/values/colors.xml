@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#9b59b6</color>
+    <color name="colorPrimaryDark">#834b99</color>
+    <color name="colorAccent">#834b99</color>
+    <color name="colorDivider">#B6B6B6</color>
+    <color name="colorPrimaryLight">#5c6bc0</color>
+    <color name="colorPrimaryLightMuch">#ffE7F3FD</color>
+    <color name="colorDividerLight">#D6D6D6</color>
+    <color name="zhihu_notify_name_color">#ff8697A4</color>
+    <color name="zhihu_notify_title_color">#ff6A6F74</color>
+    <color name="zhihu_notify_unread_bg_color">#ffE7F3FD</color>
+    <color name="image_gray_light">#bdbdbd</color>
+    <color name="dialog_shadow_color">#55000000</color>
+    <color name="image_shadow_color">#44000000</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="fab_overlay">#88e0e0e0</color>
+    <color name="fab_overlay_apprent">#00e0e0e0</color>
+    <color name="green">#0db22e</color>
+    <color name="deep_green">#FF008000</color>
+    <color name="text_dark">#af000000</color>
+    <color name="text_light">#3f000000</color>
+    <color name = "text_bright_light">#CCCCCC</color>
+    <!--用于侧滑主菜单的背景-->
+    <color name ="dark_green">#339933</color>
+    <color name="dark_dark_green">#336633</color>
+    <color name ="black">#000000</color>
+    <!--material design green series-->
+    <color name ="md_dark_primary_green">#00796B</color>
+    <color name ="md_primary_green">#009688</color>
+    <color name ="primary">#009688</color>
+
+
+    <color name="md_text">#FFFFFF</color>
+    <color name="md_primary_text">#212121</color>
+    <color name="md_second_color">#727272</color>
+    <color name="md_divider_color">#B6B6B6</color>
+
+    <color name="window_background">#FFFFFF</color>
+    <color name="brown">#648C96</color>
+    <color name="md_search_bg">#d4e157</color>
+
+
+    <!--<color name="skin_colorPrimary">#3F51B5</color>-->
+    <!--<color name="skin_colorPrimaryDark">#303F9F</color>-->
+
+    <color name="skin_colorPrimary">#9b59b6</color>
+    <color name="skin_colorPrimaryDark">#9C27B0</color>
+    <!--應用內資源-->
+    <color name="skin_colorPrimary_light_purple">#9b59b6</color>
+    <color name="skin_colorPrimaryDark_light_purple">#9b59b6</color>
+
+    <color name="skin_colorPrimary_red">#F44336</color>
+    <color name="skin_colorPrimaryDark_red">#D32F2F</color>
+
+    <color name="skin_colorPrimary_pink">#E91E63</color>
+    <color name="skin_colorPrimaryDark_pink">#C2185B</color>
+
+    <color name="skin_colorPrimary_purple">#9C27B0</color>
+    <color name="skin_colorPrimaryDark_purple">#7B1FA2</color>
+
+    <color name="skin_colorPrimary_deep_purple">#673AB7</color>
+    <color name="skin_colorPrimaryDark_deep_purple">#512DA8</color>
+
+    <color name="skin_colorPrimary_indigo">#3F51B5</color>
+    <color name="skin_colorPrimaryDark_indigo">#303F9F</color>
+
+    <color name="skin_colorPrimary_blue">#2196F3</color>
+    <color name="skin_colorPrimaryDark_blue">#1976D2</color>
+
+    <color name="skin_colorPrimary_cyan">#00BCD4</color>
+    <color name="skin_colorPrimaryDark_cyan">#0097A7</color>
+
+    <color name="skin_colorPrimary_teal">#009688</color>
+    <color name="skin_colorPrimaryDark_teal">#00796B</color>
+
+    <color name="skin_colorPrimary_green">#4CAF50</color>
+    <color name="skin_colorPrimaryDark_green">#388E3C</color>
+
+    <color name="skin_colorPrimary_lime">#CDDC39</color>
+    <color name="skin_colorPrimaryDark_lime">#AFB42B</color>
+
+
+
+    <color name="skin_colorPrimary_deep_orange">#FF5722</color>
+    <color name="skin_colorPrimaryDark_deep_orange">#E64A19</color>
+
+    <color name="skin_colorPrimary_brown">#795548</color>
+    <color name="skin_colorPrimaryDark_brown">#5D4037</color>
+
+    <color name="skin_colorPrimary_blue_grey">#607D8B</color>
+    <color name="skin_colorPrimaryDark_blue_grey">#455A64</color>
+</resources>
