@@ -22,13 +22,17 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.seki.noteasklite.Activity.MainActivity;
 import com.seki.noteasklite.Controller.ThemeController;
+import com.seki.noteasklite.DataUtil.BusEvent.CloseWaitingDialogEvent;
+import com.seki.noteasklite.DataUtil.BusEvent.OpenWaitingDialogEvent;
 import com.seki.noteasklite.DataUtil.BusEvent.ThemeColorPairChangedEvent;
 import com.seki.noteasklite.R;
+import com.seki.noteasklite.Util.NotifyHelper;
 import com.umeng.analytics.MobclickAgent;
 
 import java.lang.reflect.InvocationTargetException;
@@ -408,6 +412,19 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
             result = getResources().getDimensionPixelSize(resourceId);
         }
         return result;
+    }
+
+    PopupWindow popupWindow = null;
+    public void onEventMainThread(OpenWaitingDialogEvent e){
+        if(popupWindow == null){
+            popupWindow = NotifyHelper.popUpWaitingAnimation(BaseActivity.this, popupWindow);
+        }
+    }
+    public void onEventMainThread(CloseWaitingDialogEvent e){
+        if(popupWindow != null){
+            NotifyHelper.popUpWaitingAnimationFinished(popupWindow);
+            popupWindow = null;
+        }
     }
 
 }

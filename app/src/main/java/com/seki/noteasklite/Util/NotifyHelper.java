@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import android.widget.PopupWindow;
 import android.widget.Toast;
 
+import com.seki.noteasklite.MyApp;
 import com.seki.noteasklite.R;
 
 public class NotifyHelper {
@@ -27,13 +28,11 @@ public class NotifyHelper {
 	public static void makeToastwithTextAndPic(Context context,String info,int imageResId)
 	{
 		Toast toast = Toast.makeText(context,info,Toast.LENGTH_SHORT);
-//		Toast toast= Toast.makeText(context, info, Toast.LENGTH_SHORT);
-//		toast.setGravity(Gravity.CENTER, 0, 0);
-//		ViewGroup layout=(ViewGroup)toast.getView();
-//		ImageView notifyPic=new ImageView(context);
-//		notifyPic.setImageResource(imageResId);
-//		layout.addView(notifyPic);
+
 		toast.show();
+	}
+	public static void makePlainToast(String s){
+		Toast.makeText(MyApp.getInstance().getApplicationContext(),s,Toast.LENGTH_SHORT).show();
 	}
 	public static PopupWindow popUpWaitingAnimation(Context mContext,PopupWindow p)
 	{

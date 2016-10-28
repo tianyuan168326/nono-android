@@ -44,4 +44,9 @@ public class AuthBody {
         }
         return params;
     }
+    public static HashMap<String,String> getAuthBodyMap(HashMap<String,String> pairs){
+        HashMap<String,String> params = getAuthBodyMap();
+        params.putAll(pairs);
+        return params;
+    }
 }

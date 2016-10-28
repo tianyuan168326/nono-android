@@ -94,9 +94,6 @@ public class SearchActivity extends BaseActivity {
 					searchKeyWord = null;
 				}
 				NoteController.searchNote(searchKeyWord);
-//				SearchTask searchTask = new SearchTask(SearchActivity.this,noteList,contentList,tagList,userList,fragments);
-//				searchTask.execute(searchKeyWord,String.valueOf(viewPager.getCurrentItem()));
-//				searchTaskList.add(searchTask);
 			}
 		});
 	}
@@ -114,10 +111,7 @@ public class SearchActivity extends BaseActivity {
 	@Override
 	protected void onPause() {
 		super.onPause();
-//		for(SearchTask task:searchTaskList)
-//		{
-//			task.cancel(true);
-//		}
+
 	}
 
 	@Override

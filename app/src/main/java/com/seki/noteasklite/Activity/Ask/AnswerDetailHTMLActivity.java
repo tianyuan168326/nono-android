@@ -2,6 +2,7 @@ package com.seki.noteasklite.Activity.Ask;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -21,9 +22,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.seki.noteasklite.Activity.UserInfoActivity;
-import com.seki.noteasklite.AsyncTask.VoteForAnswerTask;
 import com.seki.noteasklite.Base.BaseActivity;
 import com.seki.noteasklite.Config.NONoConfig;
+import com.seki.noteasklite.Controller.CommunityController;
 import com.seki.noteasklite.Controller.ThemeController;
 import com.seki.noteasklite.CustomControl.Dialog.VoteDialog;
 import com.seki.noteasklite.CustomControl.VoteButton;
@@ -225,13 +226,13 @@ public class AnswerDetailHTMLActivity extends BaseActivity{
                                         break;
                                     case VOTE_UP:
                                         preVoteType = 1;
-                                        MyApp.getInstance().volleyRequestQueue.add(new VoteForAnswerTask(key_id, String.valueOf(0)
-                                                , String.valueOf(preVoteType)).getRequest());
+                                        CommunityController.voteForReply(key_id, String.valueOf(0)
+                                                , String.valueOf(preVoteType));
                                         dialog.dismiss();
                                         return;
                                 }
-                                MyApp.getInstance().volleyRequestQueue.add(new VoteForAnswerTask(key_id, String.valueOf(1)
-                                        , String.valueOf(preVoteType)).getRequest());
+                                CommunityController.voteForReply(key_id, String.valueOf(1)
+                                        , String.valueOf(preVoteType));
                                 dialog.dismiss();
                             }
 
@@ -247,17 +248,16 @@ public class AnswerDetailHTMLActivity extends BaseActivity{
                                         break;
                                     case VOTE_DOWN:
                                         preVoteType = 2;
-                                        MyApp.getInstance().volleyRequestQueue.add(new VoteForAnswerTask(key_id, String.valueOf(0)
-                                                , String.valueOf(preVoteType)).getRequest());
+                                        CommunityController.voteForReply(key_id, String.valueOf(0)
+                                                , String.valueOf(preVoteType));
                                         dialog.dismiss();
                                         return;
                                     case VOTE_UP:
                                         preVoteType = 1;
                                         break;
                                 }
-                                MyApp.getInstance().volleyRequestQueue.add(new VoteForAnswerTask(key_id, String.valueOf(2)
-                                        , String.valueOf(preVoteType)
-                                ).getRequest());
+                                CommunityController.voteForReply(key_id, String.valueOf(2)
+                                        , String.valueOf(preVoteType));
                                 dialog.dismiss();
                             }
                         });
@@ -367,4 +367,5 @@ public class AnswerDetailHTMLActivity extends BaseActivity{
         $(R.id.just_bg_primary).setBackgroundColor(ThemeController.getCurrentColor().mainColor);
         $(R.id.question_title).setBackgroundColor(ThemeController.getCurrentColor().mainColor);
     }
+
 }

@@ -25,6 +25,7 @@ import com.seki.noteasklite.DataUtil.BusEvent.NoteInsertEvent;
 import com.seki.noteasklite.DataUtil.BusEvent.NoteReloadEvent;
 import com.seki.noteasklite.DataUtil.BusEvent.NoteUpdateEvent;
 import com.seki.noteasklite.DataUtil.BusEvent.NotesDeleteEvent;
+import com.seki.noteasklite.DataUtil.BusEvent.RefreshNoteByDateDoneEvent;
 import com.seki.noteasklite.DataUtil.Enums.GroupListStyle;
 import com.seki.noteasklite.DataUtil.NoteAllArray;
 import com.seki.noteasklite.Delegate.EditNoteDelegate;
@@ -63,7 +64,6 @@ public class DateFragment extends FluidBaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         DPTManager.getInstance().initCalendar(new DPTheme() {
             @Override
             public int colorBG() {
@@ -72,7 +72,6 @@ public class DateFragment extends FluidBaseFragment {
 
             @Override
             public int colorBGCircle() {
-//                return Color.WHITE;
                 return ThemeController.getCurrentColor().getLightColor();
             }
 
@@ -120,8 +119,6 @@ public class DateFragment extends FluidBaseFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         installDatePicker();
-
-
     }
 
     @Override
@@ -241,9 +238,7 @@ public class DateFragment extends FluidBaseFragment {
         }
     }
     public void refresh(String date){
-        new com.seki.noteasklite.AsyncTask.RefreshTask(getActivity(),noteAdapter)
-                .setDate(date)
-                .execute(list);
+        NoteController.getLatestNoteByDate(date);
     }
 
 
@@ -335,53 +330,13 @@ public class DateFragment extends FluidBaseFragment {
 
     }
 
-    //    IntEvaluator ev = new IntEvaluator();
-//    public void onEvent(ShowAnimEvent event){
-//        if(date_picker.getHeight()>10){
-//            return;
-//        }
-//        if(anim !=null && anim.isRunning()){
-//            return ;
-//        }
-//         anim = new ValueAnimator().ofInt(0,10,20,30,40,50,60,70,80,90,100)
-//                .setDuration(500) ;
-//        anim.setInterpolator(new LinearInterpolator());
-//        anim.setEvaluator(new IntEvaluator());
-//        anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-//            @Override
-//            public void onAnimationUpdate(ValueAnimator animation) {
-//                int frac = (int)animation.getAnimatedValue();
-//                ViewGroup.LayoutParams p  =  date_picker.getLayoutParams();
-//               p .height =ev.evaluate(frac/100,1,fullDatePickerHeight);
-//                date_picker.setLayoutParams(p);
-//            }
-//        });
-//        anim.setTarget(date_picker);
-//        anim.start();
-//    }
-//    ValueAnimator anim;
-//    public void onEvent(HideAnimEvent event){
-//        if(date_picker.getHeight()<10){
-//            return;
-//        }
-//        if(anim !=null && anim.isRunning()){
-//            return ;
-//        }
-//        anim  = new ValueAnimator().ofInt(100,90,80,70,60,50,40,30,20,10,0)
-//
-//                .setDuration(500)
-//                ;
-//        anim.setInterpolator(new LinearInterpolator());
-//        anim.setEvaluator(new IntEvaluator());
-//        anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-//            @Override
-//            public void onAnimationUpdate(ValueAnimator animation) {
-//                int frac = (int)animation.getAnimatedValue();
-//                date_picker.getLayoutParams().height =ev.evaluate(frac/100,1,fullDatePickerHeight);
-//                date_picker.requestLayout();
-//            }
-//        });
-//        anim.setTarget(date_picker);
-//        anim.start();
-//    }
+    public void onEventMainThread(RefreshNoteByDateDoneEvent e){
+        if(!TextUtils.equals(nowTime,e.date)){
+            return ;
+        }
+        list.clear();
+        list.addAll(e.array);
+        noteAdapter.notifyDataSetChanged();
+        e.array.clear();
+    }
 }

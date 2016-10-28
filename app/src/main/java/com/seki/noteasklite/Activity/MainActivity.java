@@ -50,10 +50,10 @@ import com.sangcomz.fishbun.define.Define;
 import com.seki.noteasklite.Activity.Ask.CommunityEditActivity;
 import com.seki.noteasklite.Activity.Ask.NotifyActivity;
 import com.seki.noteasklite.Activity.Note.NoteReelEditActivity;
-import com.seki.noteasklite.AsyncTask.LogOnAsyncTask;
 import com.seki.noteasklite.Base.BaseActivityWithDrawer;
 import com.seki.noteasklite.Base.BaseFragment;
 import com.seki.noteasklite.Base.StateMachineCodeProcessHandle;
+import com.seki.noteasklite.Controller.AccountController;
 import com.seki.noteasklite.Controller.ImportNoteListener;
 import com.seki.noteasklite.Controller.NoteController;
 import com.seki.noteasklite.Controller.NotePersistenceController;
@@ -62,7 +62,6 @@ import com.seki.noteasklite.Controller.RecycleBinController;
 import com.seki.noteasklite.Controller.SaveNoteListener;
 import com.seki.noteasklite.Controller.ThemeController;
 import com.seki.noteasklite.CustomControl.BadgeView;
-import com.seki.noteasklite.DataUtil.ActivityEnum;
 import com.seki.noteasklite.DataUtil.Bean.NotificationDataModel;
 import com.seki.noteasklite.DataUtil.BusEvent.AddLabelEvent;
 import com.seki.noteasklite.DataUtil.BusEvent.DateFABGoneMainFABEvent;
@@ -352,12 +351,10 @@ public class MainActivity extends BaseActivityWithDrawer implements StateMachine
         HashMap<String, String> loginfoHashMap = SeriesLogOnInfo.getInfo(MainActivity.this);
         final String userName = loginfoHashMap.get("username");
         final String userPassword = loginfoHashMap.get("userpassword");
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                new LogOnAsyncTask(getApplicationContext(), userLogInfo, ActivityEnum.MainActivtyEnum, userName, userPassword).execute();
-            }
-        });
+        if(TextUtils.isEmpty(userName) || TextUtils.isEmpty(userPassword)){
+            return ;
+        }
+        AccountController.LogOn(userName,userPassword,true);
     }
 
     /**
@@ -375,7 +372,7 @@ public class MainActivity extends BaseActivityWithDrawer implements StateMachine
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
+        if ((drawer != null) && drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else if (fab_op_pannel.isShown()) {
             FabTransformation.with(note_add_fab).setOverlay(overlay). transformFrom(fab_op_pannel);
@@ -399,7 +396,7 @@ public class MainActivity extends BaseActivityWithDrawer implements StateMachine
                             .setClass(MainActivity.this,
                                     LogOnActivity.class));
                 } else {
-                    UserInfoActivity.start(this,MyApp.getInstance().userInfo.userId);
+                    UserInfoActivity.start(this, MyApp.userInfo.userId);
                 }
                 break;
             case R.id.note_fab_add:

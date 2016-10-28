@@ -9,8 +9,7 @@ import android.widget.TextView;
 
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.seki.noteasklite.Activity.UserInfoActivity;
-import com.seki.noteasklite.DataUtil.InnerQuestionAnswerCommentListViewHolderData;
-import com.seki.noteasklite.MyApp;
+import com.seki.noteasklite.DataUtil.Bean.AllCommentListBean;
 import com.seki.noteasklite.R;
 import com.seki.noteasklite.Util.FrescoImageloadHelper;
 import com.seki.noteasklite.Util.TimeLogic;
@@ -21,11 +20,11 @@ import java.util.List;
  * Created by yuan on 2015/8/23.
  */
 public class InnerQuestionAnswerCommentListAdapter extends RecyclerView.Adapter {
-    List<InnerQuestionAnswerCommentListViewHolderData> innerQuestionAnswerCommentList;
+    List<AllCommentListBean.CommentEntity> innerQuestionAnswerCommentList;
 
     Context _context;
     public InnerQuestionAnswerCommentListAdapter(Context context,
-            List<InnerQuestionAnswerCommentListViewHolderData> innerQuestionAnswerCommentList) {
+            List<AllCommentListBean.CommentEntity> innerQuestionAnswerCommentList) {
         this.innerQuestionAnswerCommentList = innerQuestionAnswerCommentList;
         _context = context;
     }
@@ -41,24 +40,24 @@ public class InnerQuestionAnswerCommentListAdapter extends RecyclerView.Adapter 
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         InnerQuestionAnswerCommentListViewHolder innerquestionanswercommentlistviewholder =
                 (InnerQuestionAnswerCommentListViewHolder)(holder);
-        final InnerQuestionAnswerCommentListViewHolderData innerquestionanswercommentlistviewholderdata =
+        final AllCommentListBean.CommentEntity innerquestionanswercommentlistviewholderdata =
                 innerQuestionAnswerCommentList.get(position);
         innerquestionanswercommentlistviewholder.innerQuestionAnswerCommentListItemContent
-                .setText(innerquestionanswercommentlistviewholderdata.innerQuestionAnswerCommentListItemContentData);
+                .setText(innerquestionanswercommentlistviewholderdata.comment_content);
 
         FrescoImageloadHelper.simpleLoadImageFromURL(innerquestionanswercommentlistviewholder.innerQuestionAnswerCommentListItemHeadimg,
-                innerquestionanswercommentlistviewholderdata.innerQuestionAnswerCommentListItemHeadimgData);
+                innerquestionanswercommentlistviewholderdata.user_headpic);
         innerquestionanswercommentlistviewholder.innerQuestionAnswerCommentListItemName
-                .setText(innerquestionanswercommentlistviewholderdata.innerQuestionAnswerCommentListItemNameData);
+                .setText(innerquestionanswercommentlistviewholderdata.userRealname);
         innerquestionanswercommentlistviewholder.innerQuestionAnswerCommentListItemTime
-                .setText(TimeLogic.timeLogic(innerquestionanswercommentlistviewholderdata.innerQuestionAnswerCommentListItemTimeData));
+                .setText(TimeLogic.timeLogic(innerquestionanswercommentlistviewholderdata.comment_time));
 
         innerquestionanswercommentlistviewholder.innerQuestionAnswerCommentListItemHeadimg.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         UserInfoActivity.start(_context,innerquestionanswercommentlistviewholderdata
-                        .innerQuestionAnswerCommentListItemContentUserId);
+                        .comment_raiser_id);
                     }
                 }
         );

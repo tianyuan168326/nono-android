@@ -10,8 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.seki.noteasklite.Adapter.NotifyNotificationRecycleViewAdapter;
-import com.seki.noteasklite.AsyncTask.UpdateNotificationTask;
+import com.seki.noteasklite.Controller.CommunityController;
 import com.seki.noteasklite.DataUtil.Bean.NotificationDataModel;
+import com.seki.noteasklite.DataUtil.Bean.OldNotificationsBean;
+import com.seki.noteasklite.DataUtil.BusEvent.GetOldNotificationsDoneEvent;
 import com.seki.noteasklite.DividerItemDecoration;
 import com.seki.noteasklite.MyApp;
 import com.seki.noteasklite.R;
@@ -52,8 +54,7 @@ public class NotificationFragment extends Fragment {
     }
 
     private void RefreshNotifyNotificationListview() {
-        new UpdateNotificationTask( this.getActivity(), notifyNotificationListRefresher, notificationDataModelList,
-                notifyNotificationRecycleViewAdapter).execute();
+        CommunityController.getOldNotifications();
     }
 
     private void setUpQuestionRecycleView() {
@@ -71,5 +72,26 @@ public class NotificationFragment extends Fragment {
         notifyNotificationRecycleViewAdapter.notifyDataSetChanged();
     }
 
-
+    @SuppressWarnings("unused")
+    public void onEventMainThread(GetOldNotificationsDoneEvent e){
+        notificationDataModelList.clear();
+        for (OldNotificationsBean.NotificationEntityBean notification:
+        e.notificationsList) {
+            NotificationDataModel m = new NotificationDataModel();
+            m.questionId=notification.question_id;
+            m.questionAbstract = notification.question_abstract;
+            m.otherSideUserRealName = notification.other_side_user_real_name;
+            m.otherSideUserId = notification.other_side_user_id;
+            m.answerAbstract = notification.key_abstract;
+            m.answerId = notification.answer_id;
+            m.dataTime = notification.notification_data;
+            m.notificationHistoryType = notification.notify_history_type;
+            notificationDataModelList.add(m);
+        }
+        notifyNotificationRecycleViewAdapter.notifyDataSetChanged();
+        if(notifyNotificationListRefresher.isRefreshing())
+        {
+            notifyNotificationListRefresher.setRefreshing(false);
+        }
+    }
 }

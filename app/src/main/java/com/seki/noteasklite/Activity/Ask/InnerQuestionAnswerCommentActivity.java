@@ -1,30 +1,27 @@
 package com.seki.noteasklite.Activity.Ask;
 
-import android.content.Context;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.text.TextUtils;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageButton;
 
 import com.seki.noteasklite.Activity.UserInfoActivity;
 import com.seki.noteasklite.Adapter.InnerQuestionAnswerCommentListAdapter;
-import com.seki.noteasklite.AsyncTask.AddAnswerCommentTask;
-import com.seki.noteasklite.AsyncTask.GetAnswerCommentTask;
 import com.seki.noteasklite.Base.BaseActivity;
+import com.seki.noteasklite.Base.RecycleViewLayoutManager.ScrollableLinearLayoutManager;
+import com.seki.noteasklite.Controller.CommunityController;
 import com.seki.noteasklite.CustomControl.TintImageView;
-import com.seki.noteasklite.DataUtil.InnerQuestionAnswerCommentListViewHolderData;
-import com.seki.noteasklite.DividerItemDecoration;
+import com.seki.noteasklite.DataUtil.Bean.AllCommentListBean;
+import com.seki.noteasklite.DataUtil.BusEvent.AllCommentEvent;
+import com.seki.noteasklite.DataUtil.BusEvent.RefreshCommentEvent;
 import com.seki.noteasklite.MyApp;
 import com.seki.noteasklite.R;
 import com.seki.noteasklite.Util.InputTools;
-import com.seki.noteasklite.Util.NotifyHelper;
 import com.seki.noteasklite.Util.TimeLogic;
 
 import java.util.ArrayList;
@@ -42,7 +39,7 @@ public class InnerQuestionAnswerCommentActivity extends BaseActivity  {
 
 
     private String keyId;
-    private List<InnerQuestionAnswerCommentListViewHolderData> innerQuestionAnswerCommentList;
+    private List<AllCommentListBean.CommentEntity> innerQuestionAnswerCommentList;
     private InnerQuestionAnswerCommentListAdapter innerquestionanswercommentlistadapter;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,17 +51,14 @@ public class InnerQuestionAnswerCommentActivity extends BaseActivity  {
         setUpAnswerCommentRecycleView();
         setUpCommentRecycleViewRefresher();
         registerEvents();
-        new GetAnswerCommentTask(activityInnerQuestionAnswerCommentRecycleViewRefresher,
-                innerQuestionAnswerCommentList, innerquestionanswercommentlistadapter)
-                .execute(keyId);
+        CommunityController.getReplyCommentAll(keyId);
         setUpToolBar();
     }
-    private void setUpSpinner(){
 
-    }
     private void setUpToolBar() {
         setSupportActionBar(activityInnerQuestionAnswerCommentToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if(getSupportActionBar() != null)
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     private void getDefinition() {
@@ -88,57 +82,24 @@ public class InnerQuestionAnswerCommentActivity extends BaseActivity  {
     }
 
     private void RefreshAnswerCommentList() {
-        new GetAnswerCommentTask(activityInnerQuestionAnswerCommentRecycleViewRefresher,
-                innerQuestionAnswerCommentList, innerquestionanswercommentlistadapter)
-                .execute(keyId);
+        CommunityController.getReplyCommentAll(keyId);
     }
 
     private void setUpAnswerCommentRecycleView() {
-        activityInnerQuestionAnswerCommentRecycleView.setLayoutManager(new LinearLayoutManager(this));
+        activityInnerQuestionAnswerCommentRecycleView.setLayoutManager(new ScrollableLinearLayoutManager(this));
 //        activityInnerQuestionAnswerCommentRecycleView.addItemDecoration(new DividerItemDecoration(this,
 //                DividerItemDecoration.VERTICAL_LIST));
         activityInnerQuestionAnswerCommentRecycleView.setAdapter(innerquestionanswercommentlistadapter);
     }
-    public static class RefreshCommentEvent{
-        String comment;
 
-        public String getComment() {
-            return comment;
-        }
 
-        public void setComment(String comment) {
-            this.comment = comment;
-        }
-
-        public RefreshCommentEvent(String comment) {
-            this.comment = comment;
-        }
-    }
-    @SuppressWarnings("unused")
-    public void onEventMainThread(RefreshCommentEvent event){
-        InnerQuestionAnswerCommentListViewHolderData data = new InnerQuestionAnswerCommentListViewHolderData();
-        data.innerQuestionAnswerCommentListItemContentData = event.getComment();
-        data.innerQuestionAnswerCommentListItemHeadimgData = MyApp.getInstance().userInfo.userHeadPicURL;
-        data.innerQuestionAnswerCommentListItemNameData = MyApp.getInstance().userInfo.userRealName;
-        data.innerQuestionAnswerCommentListItemTimeData = TimeLogic.getNowTimeFormatly("yyyy-MM-dd HH:mm:ss");
-        innerQuestionAnswerCommentList.add(data);
-        innerquestionanswercommentlistadapter.notifyDataSetChanged();
-    }
     @Override
     public void onClick(View v) {
         if(UserInfoActivity.verifyState(this))
             return ;
         switch (v.getId()) {
             case R.id.activity_inner_question_answer_comment_content_sender:
-                if(TextUtils.isEmpty(activityInnerQuestionAnswerCommentContent.getText()))
-                {
-                    NotifyHelper.makeToastwithTextAndPic(InnerQuestionAnswerCommentActivity.this,
-                            "内容不能为空", R.drawable.ic_error_outline_black_48dp);
-                    break;
-                }
-                new AddAnswerCommentTask((Context) this, keyId).execute(activityInnerQuestionAnswerCommentContent.getText().toString());
-                activityInnerQuestionAnswerCommentContent.setText("");
-                InputTools.HideKeyboard(activityInnerQuestionAnswerCommentContent);
+                CommunityController.postReplyNewComment(keyId,activityInnerQuestionAnswerCommentContent.getText().toString());
                 break;
         }
     }
@@ -168,5 +129,33 @@ public class InnerQuestionAnswerCommentActivity extends BaseActivity  {
     @Override
     protected HashMap<Integer, String> setUpOptionMenu() {
         return null;
+    }
+
+    @SuppressWarnings("unused")
+    public void onEventMainThread(RefreshCommentEvent event){
+        Log.d("nono","on comment refresh event");
+        activityInnerQuestionAnswerCommentContent.setText("");
+        InputTools.HideKeyboard(activityInnerQuestionAnswerCommentContent);
+        innerQuestionAnswerCommentList.add(new AllCommentListBean.CommentEntity(
+                event.getComment(),
+                MyApp.userInfo.userId,
+                MyApp.userInfo.userHeadPicURL,
+                MyApp.userInfo.userRealName,
+                TimeLogic.getNowTimeFormatly("yyyy-MM-dd HH:mm:ss")
+        ));
+        innerquestionanswercommentlistadapter.notifyDataSetChanged();
+        activityInnerQuestionAnswerCommentRecycleView.smoothScrollToPosition(
+                innerquestionanswercommentlistadapter.getItemCount() - 1
+        );
+    }
+
+    @SuppressWarnings("unused")
+    public void onEventMainThread(AllCommentEvent event){
+        Log.d("nono","on comment event");
+        innerQuestionAnswerCommentList.clear();
+        innerQuestionAnswerCommentList.addAll(event.c.comment_list);
+        innerquestionanswercommentlistadapter.notifyDataSetChanged();
+        if(activityInnerQuestionAnswerCommentRecycleViewRefresher.isRefreshing())
+            activityInnerQuestionAnswerCommentRecycleViewRefresher.setRefreshing(false);
     }
 }

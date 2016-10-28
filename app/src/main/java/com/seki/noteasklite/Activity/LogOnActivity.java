@@ -17,12 +17,10 @@ import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.seki.noteasklite.AsyncTask.LogOnAsyncTask;
 import com.seki.noteasklite.Base.BaseActivity;
 import com.seki.noteasklite.Config.NONoConfig;
 import com.seki.noteasklite.Controller.AccountController;
 import com.seki.noteasklite.CustomControl.Share.SharePanelView;
-import com.seki.noteasklite.DataUtil.ActivityEnum;
 import com.seki.noteasklite.DataUtil.Bean.QQLogOnBean;
 import com.seki.noteasklite.DataUtil.BusEvent.LogOnSuccess;
 import com.seki.noteasklite.R;
@@ -154,9 +152,7 @@ public class LogOnActivity extends BaseActivity implements View.OnClickListener 
                     NotifyHelper.makeToastwithTextAndPic(this, getString(R.string.logon_length_erro), R.mipmap.ic_error_outline_black_48dp);
                     break;
                 }
-                new LogOnAsyncTask(this, null, ActivityEnum.LogOnActivtyEnum,
-                        username, InfoEncoderHelper.getMD5Str(userpassword))
-                        .execute();
+                AccountController.LogOn(username,InfoEncoderHelper.getMD5Str(userpassword),false);
                 break;
             case R.id.account_register_button:
                 Intent intent = new Intent().setClass(this, RegisterActivity.class);
@@ -335,6 +331,7 @@ public class LogOnActivity extends BaseActivity implements View.OnClickListener 
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
+    @SuppressWarnings("unused")
     public void onEventMainThread(LogOnSuccess e){
         finish();
     }

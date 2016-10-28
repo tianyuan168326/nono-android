@@ -1,7 +1,9 @@
 package com.seki.noteasklite.NetWorkServices;
 
 import com.seki.noteasklite.DataUtil.Bean.AuthorBean;
+import com.seki.noteasklite.DataUtil.Bean.LogOnResponse;
 import com.seki.noteasklite.DataUtil.Bean.QQLogOnResponse;
+import com.seki.noteasklite.DataUtil.Bean.WonderFull;
 
 import java.util.Map;
 
@@ -20,5 +22,15 @@ public interface AccountService {
     @FormUrlEncoded
     @POST("/CommunityAuthorAdmin/qqLogOn.php")
     rx.Observable<QQLogOnResponse> qqLogOn(@FieldMap Map<String, String> params
+    );
+
+    @FormUrlEncoded
+    @POST("logon.php")
+    rx.Observable<LogOnResponse> LogOn(@FieldMap Map<String, String> params
+    );
+
+    @FormUrlEncoded
+    @POST("/quickask_upload_user_info.php")
+    rx.Observable<WonderFull> updateUserInfo(@FieldMap Map<String, String> params
     );
 }

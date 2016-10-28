@@ -18,6 +18,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.graphics.Palette;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
@@ -36,18 +37,19 @@ import com.facebook.imagepipeline.datasource.BaseBitmapDataSubscriber;
 import com.facebook.imagepipeline.image.CloseableImage;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.seki.noteasklite.AsyncTask.NoticeSomeOneTask;
 import com.seki.noteasklite.Base.BaseActivity;
+import com.seki.noteasklite.Config.NONoConfig;
+import com.seki.noteasklite.Controller.CommunityController;
 import com.seki.noteasklite.Controller.ThemeController;
 import com.seki.noteasklite.DataUtil.AppUserInfo;
 import com.seki.noteasklite.DataUtil.Bean.UserInfo;
+import com.seki.noteasklite.DataUtil.BusEvent.NoticeUserStateChangedEvent;
 import com.seki.noteasklite.Fragment.UserInfoFrg.ActivityFragment;
 import com.seki.noteasklite.Fragment.UserInfoFrg.InfoFragment;
 import com.seki.noteasklite.Fragment.UserInfoFrg.NoticeFragment;
 import com.seki.noteasklite.HuanXinUserManager;
 import com.seki.noteasklite.MyApp;
 import com.seki.noteasklite.MyCollapsingToolbarLayout;
-import com.seki.noteasklite.Config.NONoConfig;
 import com.seki.noteasklite.R;
 import com.seki.noteasklite.ThirdWrapper.PowerListener;
 import com.seki.noteasklite.ThirdWrapper.PowerStringRequest;
@@ -67,12 +69,8 @@ public class UserInfoActivity extends BaseActivity implements View.OnClickListen
     //一个标志位，来记录是不是自己，如果是自己，
     // 用于在resume（从编辑信息页面返回）的时候，更新内容
     private String isme="false";
-    private int result = RESULT_CANCELED;
-    private String headImg;
     private int bgColor;
     private Bitmap headImgBitmap;
-    public  final static int Me_Coming = 1;
-    public final static int Other_Coming = 2;
     private UserInfo userInfo = new UserInfo();
     private Button imButon;
     private SectionsPagerAdapter mSectionsPagerAdapter;
@@ -84,6 +82,7 @@ public class UserInfoActivity extends BaseActivity implements View.OnClickListen
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        openEventBus();
         userInfo.data = new UserInfo.Data();
         bgColor= ContextCompat.getColor(this,R.color.colorPrimary);
         setContentView(R.layout.activity_user_info, "");
@@ -140,7 +139,9 @@ public class UserInfoActivity extends BaseActivity implements View.OnClickListen
                     if (isme.compareTo("true") == 0) {
                         startActivityForResult(new Intent(this,EditInfoActivity.class),0);
                     } else if (isme.compareTo("false") == 0) {
-                         new NoticeSomeOneTask(this, activityUserInfoNotice).execute(MyApp.userInfo.userId, String.valueOf( userInfo.data.user_id));
+                        CommunityController.noticeOther(String.valueOf(userInfo.data.user_id),
+                                !activityUserInfoNotice.getText().toString()
+                                .equals("关注"));
                     }
                 }
                 break;
@@ -486,8 +487,6 @@ public class UserInfoActivity extends BaseActivity implements View.OnClickListen
                     return "动态";
                 case 2:
                     return "关注";
-//                case 3:
-//                    return "话题";
             }
             return null;
         }
@@ -497,5 +496,12 @@ public class UserInfoActivity extends BaseActivity implements View.OnClickListen
     protected void themePatch() {
         super.themePatch();
         ((MyCollapsingToolbarLayout)$(R.id.collapsing)).setContentScrimColor(ThemeController.getCurrentColor().mainColor);
+    }
+    @SuppressWarnings("unused")
+    public void onEventMainThread(NoticeUserStateChangedEvent e){
+        if(!TextUtils.equals(String.valueOf( userInfo.data.user_id ),e.userId)){
+            return ;
+        }
+        activityUserInfoNotice.setText(e.noticeState?"取消关注":"关注");
     }
 }

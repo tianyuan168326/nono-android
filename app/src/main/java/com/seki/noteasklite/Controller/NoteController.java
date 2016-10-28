@@ -1,6 +1,7 @@
 package com.seki.noteasklite.Controller;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Handler;
 import android.os.Looper;
 import android.text.Html;
@@ -16,8 +17,10 @@ import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
 import com.seki.noteasklite.Activity.LogOnActivity;
 import com.seki.noteasklite.Config.NONoConfig;
+import com.seki.noteasklite.DBHelpers.NoteDBAdapter;
 import com.seki.noteasklite.DBHelpers.NoteDBHelper;
 import com.seki.noteasklite.DataUtil.Bean.DeleteNoteBean;
+import com.seki.noteasklite.DataUtil.Bean.NoteDateItemArray;
 import com.seki.noteasklite.DataUtil.Bean.NoteLabelBean;
 import com.seki.noteasklite.DataUtil.Bean.ShareNote;
 import com.seki.noteasklite.DataUtil.Bean.WonderFull;
@@ -29,6 +32,7 @@ import com.seki.noteasklite.DataUtil.BusEvent.NoteLabelSearchDoneEvent;
 import com.seki.noteasklite.DataUtil.BusEvent.NoteUpdateEvent;
 import com.seki.noteasklite.DataUtil.BusEvent.NoteUploadEvent;
 import com.seki.noteasklite.DataUtil.BusEvent.NotesDeleteEvent;
+import com.seki.noteasklite.DataUtil.BusEvent.RefreshNoteByDateDoneEvent;
 import com.seki.noteasklite.DataUtil.BusEvent.SearchNoteEvent;
 import com.seki.noteasklite.DataUtil.BusEvent.UpdateGroupName;
 import com.seki.noteasklite.DataUtil.LogStateEnum;
@@ -735,5 +739,42 @@ public class NoteController {
                                 l.onZipPath(path);
                             }
                         });
+    }
+
+    public static void getLatestNoteByDate(final String date){
+
+
+        Observable.create(new Observable.OnSubscribe<List<NoteDateItemArray>>() {
+            @Override
+            public void call(Subscriber<? super List<NoteDateItemArray>> subscriber) {
+                List<NoteDateItemArray> arrayList = new ArrayList<>();
+                NoteDBAdapter noteDBAdapter=new NoteDBAdapter(MyApp.getInstance().getApplicationContext());
+                noteDBAdapter.open();
+                Cursor cursor =noteDBAdapter.getTitleByDate(date);
+                if(cursor.getCount()>0&&cursor.moveToLast()){
+                    do{
+                        arrayList.add(new NoteDateItemArray(cursor.getString(cursor.getColumnIndex(NoteDBAdapter.KEY_TITLE))
+                                ,cursor.getString(cursor.getColumnIndex(NoteDBAdapter.KEY_TIME))
+                                , cursor.getString(cursor.getColumnIndex(NoteDBAdapter.KEY_CONTENT))
+                                , cursor.getString(cursor.getColumnIndex(NoteDBAdapter.KEY_GROUP))
+                                , cursor.getInt(cursor.getColumnIndex(NoteDBAdapter.KEY_ROWID))
+                                ,cursor.getString(cursor.getColumnIndex(NoteDBAdapter.KEY_IS_ON_CLOUD))
+                                ,cursor.getString(cursor.getColumnIndex(NoteDBAdapter.KEY_UUID))
+                        ));
+                    }while (cursor.moveToPrevious());
+                }
+                noteDBAdapter.close();
+                cursor.close();
+                subscriber.onNext(arrayList);
+                subscriber.onCompleted();
+            }
+        }).subscribe(new Action1<List<NoteDateItemArray>>() {
+                    @Override
+                    public void call(List<NoteDateItemArray> noteDateItemArrays) {
+                        EventBus.getDefault().post(new RefreshNoteByDateDoneEvent(noteDateItemArrays,date));
+                    }
+                });
+
+
     }
 }

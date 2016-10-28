@@ -17,18 +17,21 @@ import android.widget.Toast;
 
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.pnikosis.materialishprogress.ProgressWheel;
-import com.seki.noteasklite.AsyncTask.UpdateUserInfoTask;
 import com.seki.noteasklite.Base.BaseActivity;
-import com.seki.noteasklite.Controller.ThemeController;
-import com.seki.noteasklite.MyApp;
+ import com.seki.noteasklite.Controller.AccountController;
+ import com.seki.noteasklite.Controller.ThemeController;
+ import com.seki.noteasklite.DataUtil.BusEvent.UpDateUserInfoSuccessEvent;
+ import com.seki.noteasklite.DataUtil.BusEvent.UpdateUserInfoFailedEvent;
+ import com.seki.noteasklite.MyApp;
 import com.seki.noteasklite.OnGetImagePolicy.IOnGetImagePolicy;
 import com.seki.noteasklite.OnGetImagePolicy.ImageProcessor;
 import com.seki.noteasklite.OnGetImagePolicy.OnGetImageByQiNiu;
 import com.seki.noteasklite.R;
 import com.seki.noteasklite.Util.FrescoImageloadHelper;
 import com.seki.noteasklite.Util.GetPathFromUri4kitkat;
+ import com.seki.noteasklite.Util.NotifyHelper;
 
-import java.util.HashMap;
+ import java.util.HashMap;
 
 
 public class EditInfoActivity extends BaseActivity implements View.OnClickListener {
@@ -125,9 +128,11 @@ public class EditInfoActivity extends BaseActivity implements View.OnClickListen
                 //startActivityForResult(new Intent(this, SelectPicActivity.class), 4);
                 break;
             case R.id.edit_info_commit:
-
-                new UpdateUserInfoTask(EditInfoActivity.this)
-                        .execute( editInfoAbstract.getText().toString(),editInfoName.getText().toString(),selectedHeadImgURL);
+                AccountController.updateUserInfo(
+                        editInfoAbstract.getText().toString(),
+                        editInfoName.getText().toString(),
+                        selectedHeadImgURL
+                );
             break;
         }
     }
@@ -168,6 +173,15 @@ public class EditInfoActivity extends BaseActivity implements View.OnClickListen
     protected void themePatch() {
         super.themePatch();
         $(R.id.just_bg).setBackgroundColor(ThemeController.getCurrentColor().mainColor);
+    }
+
+    public void onEventMainThread(UpDateUserInfoSuccessEvent e){
+        finish();
+        NotifyHelper.makePlainToast(getString(R.string.updata_info_success));
+    }
+
+    public void onEventMainThread(UpdateUserInfoFailedEvent e){
+        startActivity(new Intent().setClass(this, LogOnActivity.class));
     }
 }
 
