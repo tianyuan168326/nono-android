@@ -4,7 +4,7 @@
 # 1. 什么是 NONo-Android?
 NONo-Android是NONo－－下一代个人云笔记平台的Android端应用。
 
-你可以从[这儿](http://www.coolapk.com/apk/com.seki.noteasklite)直接下载APK安装包到手机上直接进行安装体验。
+
 
 <img src="http://image.coolapk.com/apk_image/2016/0830/8f3cae0127afab713dcf4048ee72f1f8-for-23837-o_1ardsovtq94mmt86r01882cjr10-uid-557725.png" width="156">
 <img src="http://image.coolapk.com/apk_image/2016/0830/c39e1c043c6f9674e7f8b97059b898bd-for-23837-o_1ardsp36f1uk2cra16op1gdu1lur16-uid-557725.png" width="156">
